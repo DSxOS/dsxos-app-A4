@@ -234,7 +234,7 @@ m.soc_end_target = Constraint(rule=soc_end_target_rule)
 def pcc_self_consumption_rule(m, t):
     return m.PCC_IMPORT_kW[t] - m.PCC_EXPORT_kW[t] == m.ESS_kW[t] + m.P_kW[t] + m.PV_kW[t]
 
-m.pcc_self_consumption = Constraint(m.T, rule=pcc_self_consumption_rule)
+# m.pcc_self_consumption = Constraint(m.T, rule=pcc_self_consumption_rule)
 
 ########################################################################
 # Cost function and optimization objective
@@ -253,7 +253,7 @@ solver = SolverFactory('glpk')#, options={'tmlim': 300})
 results = solver.solve(m)
 results.write()
 
-# debug_model(m)
+debug_model(m, "debug_output.txt")
 
 if (results.solver.status == SolverStatus.ok) and (
     (results.solver.termination_condition == TerminationCondition.optimal) 

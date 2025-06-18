@@ -108,7 +108,7 @@ def extract_prognosis_values(
 
     prs = [r for r in prs if r["time"] <= end]  # võib olla ka enne starti
     prs.sort(key=lambda r: r["time"])
-    times = [r["time"] for r in prs]
+    # times = [r["time"] for r in prs]
 
     result = []
     current_idx = 0
@@ -122,7 +122,10 @@ def extract_prognosis_values(
         if prs[current_idx]["time"] <= expected_time:
             value = prs[current_idx]["value"]
         else:
-            raise TaskFailException(f"No valid {label} value for time {expected_time}")
+            raise TaskFailException(
+                f"No valid {label} value for time {expected_time}. "
+                f"Available range: {prs[0]['time']} to {prs[-1]['time']}"
+            )
 
         result.append({"time": expected_time, "value": value})
 

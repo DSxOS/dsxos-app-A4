@@ -2,24 +2,49 @@ from pyomo.environ import Var, Constraint, value
 from pyomo.util.infeasible import log_infeasible_constraints
 import sys
 import io
+import logging
+# logging.getLogger('pyomo.core').setLevel(logging.INFO)
+# logging.getLogger('pyomo.util.infeasible').setLevel(logging.INFO)
 
 def debug_model(m, filename="debug_output.txt"):
     with open(filename, "w", encoding="utf-8") as f:
         # --------------------------------------------
         # 1. log_infeasible_constraints väljund failis
         # --------------------------------------------
-        buffer = io.StringIO()
-        old_stdout = sys.stdout
-        sys.stdout = buffer
+        log_stream = io.StringIO()
+
+        # Ajutine logger konfiguratsioon
+        logger = logging.getLogger("pyomo.util.infeasible")
+        old_handlers = logger.handlers[:]
+        logger.handlers = []  # eemaldame vanad handlerid ajutiselt
+        handler = logging.StreamHandler(log_stream)
+        handler.setLevel(logging.INFO)
+        logger.addHandler(handler)
+        logger.setLevel(logging.INFO)
+        
+        
         try:
-            log_infeasible_constraints(m, log_expression=True)
+            log_infeasible_constraints(m)
         except Exception as e:
-            buffer.write(f"VIGA log_infeasible_constraints() käivitamisel: {e}\n")
+            log_stream.write(f"VIGA log_infeasible_constraints() käivitamisel: {e}\n")
         finally:
-            sys.stdout = old_stdout
+            logger.handlers = old_handlers  # taastame loggeri varasemad handlerid
 
         f.write("🔍 INFEASIBLE CONSTRAINTID\n")
-        f.write(buffer.getvalue())
+        f.write(log_stream.getvalue())
+
+        # buffer = io.StringIO()
+        # old_stdout = sys.stdout
+        # sys.stdout = buffer
+        # try:
+        #     log_infeasible_constraints(m, log_expression=True)
+        # except Exception as e:
+        #     buffer.write(f"VIGA log_infeasible_constraints() käivitamisel: {e}\n")
+        # finally:
+        #     sys.stdout = old_stdout
+
+        # f.write("🔍 INFEASIBLE CONSTRAINTID\n")
+        # f.write(buffer.getvalue())
 
         # --------------------------------------------
         # 2. Kõik muutujad ja nende väärtused
