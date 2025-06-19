@@ -31,6 +31,7 @@ api_headers = {"Authorization": api_token}
 
 # Initialize query_utils with URL + headers    
 query_utils.init(api_url, api_headers)
+
 logger = setup_logger(
     log_file="query.log",
     loki_url="http://localhost:3100/loki/api/v1/push",  # Loki address
@@ -80,6 +81,9 @@ print(f"ESS_SOC_max -- ,{ESS_SOC_max}!")
 print(f"ESS_safe_min -- ,{ESS_safe_min}!")
 print(f"ESS_END_kWh -- ,{ESS_END_kWh}!")
 print(f"kW_to_kWh -- ,{kW_to_kWh}!")
+print(f"interval -- ,{interval}!")
+print(f"min_period -- ,{min_period}!")
+print(f"result_dp_id -- ,{result_dp_id}!")
 ########################################################################
 
 ESS_eff_kWh = ESS_max_kWh #(ESS_max_kWh*(ESS_SOC_max - ESS_SOC_min)/100) # Salvesti efektiivne mahutavus
@@ -105,8 +109,7 @@ def model_to_df(m):
     ess = [value(m.ESS_kW[i]) for i in periods]
     ess_soc = [value(m.ESS_SoC[i]) for i in periods]    
     pcc = [value(m.PCC_IMPORT_kW[i])-value(m.PCC_EXPORT_kW[i]) for i in periods]
-
-
+ 
 
     df_dict = {
         'Period': periods,
@@ -129,8 +132,7 @@ period = datetime.fromisoformat(time_range["end"]) - datetime.fromisoformat(time
 if int(period.total_seconds()) > min_period:
     time_range_start = datetime.fromisoformat(time_range["start"])
     time_range_end = datetime.fromisoformat(time_range["end"])
-    # count = raw_data["params"]["endTime_delta"]/interval
-    
+        
     print(f"start_time: {start_time}")
     print(f"time_range: {time_range}")
     print(f"period: {period.total_seconds()} seconds")
@@ -146,7 +148,7 @@ if int(period.total_seconds()) > min_period:
 
     data = pd.DataFrame({
         'Load': Util.extract_values_only(cons_extracted),
-        'PV': Util.extract_values_only(prod_extracted)
+        'PV': Util.extract_values_only(prod_extracted),
     })
 else: logger.error(f"Not enough current prognosis")
 
@@ -159,6 +161,7 @@ m = ConcreteModel()
 m.T = Set(initialize=range(len(data)), doc='Indexes', ordered=True)
 m.P_kW = Param(m.T, initialize=data.Load, doc='Load [kW]', within=Any)
 m.PV_kW = Param(m.T, initialize=data.PV, doc='PV generation [kW]', within=Any)
+
 
 # Variable Parameters
 m.PCC_exp_z = Var(m.T, bounds=(0,1), within=NonNegativeIntegers)
@@ -181,7 +184,7 @@ m.sim_import_export_restrict = Constraint(m.T, rule=sim_import_export_restrict_r
 
 def pcc_export_kW_rule(m, t):
     "PCC export calculation"
-    return m.PCC_EXPORT_kW[t] <= P_exp_lim_kW*m.PCC_exp_z[t]
+    return m.PCC_EXPORT_kW[t] <= -P_exp_lim_kW*m.PCC_exp_z[t]
 
 m.pcc_export = Constraint(m.T, rule=pcc_export_kW_rule)
 
@@ -234,7 +237,7 @@ m.soc_end_target = Constraint(rule=soc_end_target_rule)
 def pcc_self_consumption_rule(m, t):
     return m.PCC_IMPORT_kW[t] - m.PCC_EXPORT_kW[t] == m.ESS_kW[t] + m.P_kW[t] + m.PV_kW[t]
 
-# m.pcc_self_consumption = Constraint(m.T, rule=pcc_self_consumption_rule)
+m.pcc_self_consumption = Constraint(m.T, rule=pcc_self_consumption_rule)
 
 ########################################################################
 # Cost function and optimization objective
@@ -249,7 +252,7 @@ m.objective = Objective(expr = cost, sense=minimize)
 ########################################################################
 # Solve
 ########################################################################
-solver = SolverFactory('glpk')#, options={'tmlim': 300})
+solver = SolverFactory('glpk', options={'tmlim': 300})
 results = solver.solve(m)
 results.write()
 
