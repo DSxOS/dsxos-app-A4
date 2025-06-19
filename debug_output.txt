@@ -2,22 +2,22 @@
 
 📦 MUUTUJATE VÄÄRTUSED
 
-PCC_exp_z[0]                             = 0.0000
-PCC_exp_z[1]                             = 0.0000
-PCC_exp_z[2]                             = 0.0000
-PCC_exp_z[3]                             = 0.0000
-PCC_exp_z[4]                             = 0.0000
-PCC_exp_z[5]                             = 0.0000
-PCC_exp_z[6]                             = 0.0000
-PCC_exp_z[7]                             = 0.0000
+PCC_exp_z[0]                             = 1.0000
+PCC_exp_z[1]                             = 1.0000
+PCC_exp_z[2]                             = 1.0000
+PCC_exp_z[3]                             = 1.0000
+PCC_exp_z[4]                             = 1.0000
+PCC_exp_z[5]                             = 1.0000
+PCC_exp_z[6]                             = 1.0000
+PCC_exp_z[7]                             = 1.0000
 PCC_exp_z[8]                             = 0.0000
 PCC_exp_z[9]                             = 0.0000
 PCC_exp_z[10]                            = 0.0000
-PCC_exp_z[11]                            = 0.0000
-PCC_exp_z[12]                            = 0.0000
-PCC_exp_z[13]                            = 0.0000
-PCC_exp_z[14]                            = 0.0000
-PCC_exp_z[15]                            = 0.0000
+PCC_exp_z[11]                            = 1.0000
+PCC_exp_z[12]                            = 1.0000
+PCC_exp_z[13]                            = 1.0000
+PCC_exp_z[14]                            = 1.0000
+PCC_exp_z[15]                            = 1.0000
 PCC_exp_z[16]                            = 0.0000
 PCC_exp_z[17]                            = 0.0000
 PCC_exp_z[18]                            = 0.0000
@@ -73,55 +73,55 @@ PCC_exp_z[67]                            = 0.0000
 PCC_exp_z[68]                            = 0.0000
 PCC_exp_z[69]                            = 0.0000
 PCC_exp_z[70]                            = 0.0000
-PCC_exp_z[71]                            = 0.0000
-PCC_exp_z[72]                            = 0.0000
-PCC_exp_z[73]                            = 0.0000
-PCC_exp_z[74]                            = 0.0000
-PCC_exp_z[75]                            = 0.0000
-PCC_exp_z[76]                            = 0.0000
-PCC_exp_z[77]                            = 0.0000
-PCC_exp_z[78]                            = 0.0000
-PCC_exp_z[79]                            = 0.0000
-PCC_exp_z[80]                            = 0.0000
-PCC_exp_z[81]                            = 0.0000
-PCC_exp_z[82]                            = 0.0000
-PCC_exp_z[83]                            = 0.0000
-PCC_exp_z[84]                            = 0.0000
-PCC_exp_z[85]                            = 0.0000
-PCC_exp_z[86]                            = 0.0000
-PCC_exp_z[87]                            = 0.0000
-PCC_exp_z[88]                            = 0.0000
-PCC_exp_z[89]                            = 0.0000
-PCC_exp_z[90]                            = 0.0000
-PCC_exp_z[91]                            = 0.0000
-PCC_exp_z[92]                            = 0.0000
-PCC_exp_z[93]                            = 0.0000
-PCC_exp_z[94]                            = 0.0000
-PCC_exp_z[95]                            = 0.0000
-PCC_exp_z[96]                            = 0.0000
-PCC_exp_z[97]                            = 0.0000
-PCC_exp_z[98]                            = 0.0000
-PCC_exp_z[99]                            = 0.0000
-PCC_exp_z[100]                           = 0.0000
-PCC_exp_z[101]                           = 0.0000
-PCC_exp_z[102]                           = 0.0000
-PCC_exp_z[103]                           = 0.0000
-PCC_exp_z[104]                           = 0.0000
-PCC_exp_z[105]                           = 0.0000
-PCC_exp_z[106]                           = 0.0000
-PCC_exp_z[107]                           = 0.0000
-PCC_exp_z[108]                           = 0.0000
-PCC_exp_z[109]                           = 0.0000
-PCC_exp_z[110]                           = 0.0000
-PCC_exp_z[111]                           = 0.0000
-PCC_exp_z[112]                           = 0.0000
-PCC_exp_z[113]                           = 0.0000
-PCC_exp_z[114]                           = 0.0000
-PCC_exp_z[115]                           = 0.0000
-PCC_exp_z[116]                           = 0.0000
-PCC_exp_z[117]                           = 0.0000
-PCC_exp_z[118]                           = 0.0000
-PCC_exp_z[119]                           = 0.0000
+PCC_exp_z[71]                            = 1.0000
+PCC_exp_z[72]                            = 1.0000
+PCC_exp_z[73]                            = 1.0000
+PCC_exp_z[74]                            = 1.0000
+PCC_exp_z[75]                            = 1.0000
+PCC_exp_z[76]                            = 1.0000
+PCC_exp_z[77]                            = 1.0000
+PCC_exp_z[78]                            = 1.0000
+PCC_exp_z[79]                            = 1.0000
+PCC_exp_z[80]                            = 1.0000
+PCC_exp_z[81]                            = 1.0000
+PCC_exp_z[82]                            = 1.0000
+PCC_exp_z[83]                            = 1.0000
+PCC_exp_z[84]                            = 1.0000
+PCC_exp_z[85]                            = 1.0000
+PCC_exp_z[86]                            = 1.0000
+PCC_exp_z[87]                            = 1.0000
+PCC_exp_z[88]                            = 1.0000
+PCC_exp_z[89]                            = 1.0000
+PCC_exp_z[90]                            = 1.0000
+PCC_exp_z[91]                            = 1.0000
+PCC_exp_z[92]                            = 1.0000
+PCC_exp_z[93]                            = 1.0000
+PCC_exp_z[94]                            = 1.0000
+PCC_exp_z[95]                            = 1.0000
+PCC_exp_z[96]                            = 1.0000
+PCC_exp_z[97]                            = 1.0000
+PCC_exp_z[98]                            = 1.0000
+PCC_exp_z[99]                            = 1.0000
+PCC_exp_z[100]                           = 1.0000
+PCC_exp_z[101]                           = 1.0000
+PCC_exp_z[102]                           = 1.0000
+PCC_exp_z[103]                           = 1.0000
+PCC_exp_z[104]                           = 1.0000
+PCC_exp_z[105]                           = 1.0000
+PCC_exp_z[106]                           = 1.0000
+PCC_exp_z[107]                           = 1.0000
+PCC_exp_z[108]                           = 1.0000
+PCC_exp_z[109]                           = 1.0000
+PCC_exp_z[110]                           = 1.0000
+PCC_exp_z[111]                           = 1.0000
+PCC_exp_z[112]                           = 1.0000
+PCC_exp_z[113]                           = 1.0000
+PCC_exp_z[114]                           = 1.0000
+PCC_exp_z[115]                           = 1.0000
+PCC_exp_z[116]                           = 1.0000
+PCC_exp_z[117]                           = 1.0000
+PCC_exp_z[118]                           = 1.0000
+PCC_exp_z[119]                           = 1.0000
 PCC_exp_z[120]                           = 0.0000
 PCC_exp_z[121]                           = 0.0000
 PCC_exp_z[122]                           = 0.0000
@@ -290,22 +290,22 @@ PCC_imp_z[140]                           = 0.0000
 PCC_imp_z[141]                           = 0.0000
 PCC_imp_z[142]                           = 0.0000
 PCC_imp_z[143]                           = 0.0000
-PCC_EXPORT_kW[0]                         = 0.0000
-PCC_EXPORT_kW[1]                         = 0.0000
-PCC_EXPORT_kW[2]                         = 0.0000
-PCC_EXPORT_kW[3]                         = 0.0000
-PCC_EXPORT_kW[4]                         = 0.0000
-PCC_EXPORT_kW[5]                         = 0.0000
-PCC_EXPORT_kW[6]                         = 0.0000
-PCC_EXPORT_kW[7]                         = 0.0000
+PCC_EXPORT_kW[0]                         = 270.4750
+PCC_EXPORT_kW[1]                         = 264.2154
+PCC_EXPORT_kW[2]                         = 256.4801
+PCC_EXPORT_kW[3]                         = 247.3709
+PCC_EXPORT_kW[4]                         = 237.0081
+PCC_EXPORT_kW[5]                         = 225.5274
+PCC_EXPORT_kW[6]                         = 213.0738
+PCC_EXPORT_kW[7]                         = 179.8988
 PCC_EXPORT_kW[8]                         = 0.0000
 PCC_EXPORT_kW[9]                         = 0.0000
 PCC_EXPORT_kW[10]                        = 0.0000
-PCC_EXPORT_kW[11]                        = 0.0000
-PCC_EXPORT_kW[12]                        = 0.0000
-PCC_EXPORT_kW[13]                        = 0.0000
-PCC_EXPORT_kW[14]                        = 0.0000
-PCC_EXPORT_kW[15]                        = 0.0000
+PCC_EXPORT_kW[11]                        = 70.7500
+PCC_EXPORT_kW[12]                        = 63.0302
+PCC_EXPORT_kW[13]                        = 55.4498
+PCC_EXPORT_kW[14]                        = 47.5102
+PCC_EXPORT_kW[15]                        = 33.1169
 PCC_EXPORT_kW[16]                        = 0.0000
 PCC_EXPORT_kW[17]                        = 0.0000
 PCC_EXPORT_kW[18]                        = 0.0000
@@ -361,55 +361,55 @@ PCC_EXPORT_kW[67]                        = 0.0000
 PCC_EXPORT_kW[68]                        = 0.0000
 PCC_EXPORT_kW[69]                        = 0.0000
 PCC_EXPORT_kW[70]                        = 0.0000
-PCC_EXPORT_kW[71]                        = 0.0000
-PCC_EXPORT_kW[72]                        = 0.0000
-PCC_EXPORT_kW[73]                        = 0.0000
-PCC_EXPORT_kW[74]                        = 0.0000
-PCC_EXPORT_kW[75]                        = 0.0000
-PCC_EXPORT_kW[76]                        = 0.0000
-PCC_EXPORT_kW[77]                        = 0.0000
-PCC_EXPORT_kW[78]                        = 0.0000
-PCC_EXPORT_kW[79]                        = 0.0000
-PCC_EXPORT_kW[80]                        = 0.0000
-PCC_EXPORT_kW[81]                        = 0.0000
-PCC_EXPORT_kW[82]                        = 0.0000
-PCC_EXPORT_kW[83]                        = 0.0000
-PCC_EXPORT_kW[84]                        = 0.0000
-PCC_EXPORT_kW[85]                        = 0.0000
-PCC_EXPORT_kW[86]                        = 0.0000
-PCC_EXPORT_kW[87]                        = 0.0000
-PCC_EXPORT_kW[88]                        = 0.0000
-PCC_EXPORT_kW[89]                        = 0.0000
-PCC_EXPORT_kW[90]                        = 0.0000
-PCC_EXPORT_kW[91]                        = 0.0000
-PCC_EXPORT_kW[92]                        = 0.0000
-PCC_EXPORT_kW[93]                        = 0.0000
-PCC_EXPORT_kW[94]                        = 0.0000
-PCC_EXPORT_kW[95]                        = 0.0000
-PCC_EXPORT_kW[96]                        = 0.0000
-PCC_EXPORT_kW[97]                        = 0.0000
-PCC_EXPORT_kW[98]                        = 0.0000
-PCC_EXPORT_kW[99]                        = 0.0000
-PCC_EXPORT_kW[100]                       = 0.0000
-PCC_EXPORT_kW[101]                       = 0.0000
-PCC_EXPORT_kW[102]                       = 0.0000
-PCC_EXPORT_kW[103]                       = 0.0000
-PCC_EXPORT_kW[104]                       = 0.0000
-PCC_EXPORT_kW[105]                       = 0.0000
-PCC_EXPORT_kW[106]                       = 0.0000
-PCC_EXPORT_kW[107]                       = 0.0000
-PCC_EXPORT_kW[108]                       = 0.0000
-PCC_EXPORT_kW[109]                       = 0.0000
-PCC_EXPORT_kW[110]                       = 0.0000
-PCC_EXPORT_kW[111]                       = 0.0000
-PCC_EXPORT_kW[112]                       = 0.0000
-PCC_EXPORT_kW[113]                       = 0.0000
-PCC_EXPORT_kW[114]                       = 0.0000
-PCC_EXPORT_kW[115]                       = 0.0000
-PCC_EXPORT_kW[116]                       = 0.0000
-PCC_EXPORT_kW[117]                       = 0.0000
-PCC_EXPORT_kW[118]                       = 0.0000
-PCC_EXPORT_kW[119]                       = 0.0000
+PCC_EXPORT_kW[71]                        = 33.9432
+PCC_EXPORT_kW[72]                        = 42.9541
+PCC_EXPORT_kW[73]                        = 52.6553
+PCC_EXPORT_kW[74]                        = 62.9795
+PCC_EXPORT_kW[75]                        = 85.1734
+PCC_EXPORT_kW[76]                        = 97.5096
+PCC_EXPORT_kW[77]                        = 110.1415
+PCC_EXPORT_kW[78]                        = 122.9436
+PCC_EXPORT_kW[79]                        = 211.5943
+PCC_EXPORT_kW[80]                        = 230.5336
+PCC_EXPORT_kW[81]                        = 248.8710
+PCC_EXPORT_kW[82]                        = 266.4717
+PCC_EXPORT_kW[83]                        = 389.9233
+PCC_EXPORT_kW[84]                        = 411.4251
+PCC_EXPORT_kW[85]                        = 431.3015
+PCC_EXPORT_kW[86]                        = 449.2984
+PCC_EXPORT_kW[87]                        = 785.5017
+PCC_EXPORT_kW[88]                        = 807.7910
+PCC_EXPORT_kW[89]                        = 826.1034
+PCC_EXPORT_kW[90]                        = 840.2205
+PCC_EXPORT_kW[91]                        = 943.2513
+PCC_EXPORT_kW[92]                        = 943.2293
+PCC_EXPORT_kW[93]                        = 943.2146
+PCC_EXPORT_kW[94]                        = 943.2013
+PCC_EXPORT_kW[95]                        = 943.2003
+PCC_EXPORT_kW[96]                        = 943.2066
+PCC_EXPORT_kW[97]                        = 943.2311
+PCC_EXPORT_kW[98]                        = 943.2526
+PCC_EXPORT_kW[99]                        = 943.2807
+PCC_EXPORT_kW[100]                       = 943.3156
+PCC_EXPORT_kW[101]                       = 943.3575
+PCC_EXPORT_kW[102]                       = 943.4051
+PCC_EXPORT_kW[103]                       = 943.4599
+PCC_EXPORT_kW[104]                       = 943.5198
+PCC_EXPORT_kW[105]                       = 943.5869
+PCC_EXPORT_kW[106]                       = 943.6583
+PCC_EXPORT_kW[107]                       = 943.7224
+PCC_EXPORT_kW[108]                       = 943.7427
+PCC_EXPORT_kW[109]                       = 943.7840
+PCC_EXPORT_kW[110]                       = 943.2944
+PCC_EXPORT_kW[111]                       = 813.3273
+PCC_EXPORT_kW[112]                       = 705.9199
+PCC_EXPORT_kW[113]                       = 602.3125
+PCC_EXPORT_kW[114]                       = 678.1732
+PCC_EXPORT_kW[115]                       = 243.3032
+PCC_EXPORT_kW[116]                       = 294.4908
+PCC_EXPORT_kW[117]                       = 136.7522
+PCC_EXPORT_kW[118]                       = 90.2943
+PCC_EXPORT_kW[119]                       = 55.3152
 PCC_EXPORT_kW[120]                       = 0.0000
 PCC_EXPORT_kW[121]                       = 0.0000
 PCC_EXPORT_kW[122]                       = 0.0000
@@ -579,76 +579,76 @@ PCC_IMPORT_kW[141]                       = 0.0000
 PCC_IMPORT_kW[142]                       = 0.0000
 PCC_IMPORT_kW[143]                       = 0.0000
 ESS_kW[0]                                = 0.0000
-ESS_kW[1]                                = 0.0000
+ESS_kW[1]                                = -0.0000
 ESS_kW[2]                                = 0.0000
 ESS_kW[3]                                = 0.0000
 ESS_kW[4]                                = 0.0000
 ESS_kW[5]                                = 0.0000
 ESS_kW[6]                                = 0.0000
 ESS_kW[7]                                = 0.0000
-ESS_kW[8]                                = 0.0000
-ESS_kW[9]                                = 0.0000
-ESS_kW[10]                               = 0.0000
+ESS_kW[8]                                = 167.2757
+ESS_kW[9]                                = 154.2320
+ESS_kW[10]                               = 140.9249
 ESS_kW[11]                               = 0.0000
 ESS_kW[12]                               = 0.0000
 ESS_kW[13]                               = 0.0000
 ESS_kW[14]                               = 0.0000
 ESS_kW[15]                               = 0.0000
-ESS_kW[16]                               = 0.0000
-ESS_kW[17]                               = 0.0000
-ESS_kW[18]                               = 0.0000
-ESS_kW[19]                               = 0.0000
-ESS_kW[20]                               = 0.0000
-ESS_kW[21]                               = 0.0000
-ESS_kW[22]                               = 0.0000
-ESS_kW[23]                               = 0.0000
-ESS_kW[24]                               = 0.0000
-ESS_kW[25]                               = 0.0000
-ESS_kW[26]                               = 0.0000
-ESS_kW[27]                               = 0.0000
-ESS_kW[28]                               = 0.0000
-ESS_kW[29]                               = 0.0000
-ESS_kW[30]                               = 0.0000
-ESS_kW[31]                               = 0.0000
-ESS_kW[32]                               = 0.0000
-ESS_kW[33]                               = 0.0000
-ESS_kW[34]                               = 0.0000
-ESS_kW[35]                               = 0.0000
-ESS_kW[36]                               = 0.0000
-ESS_kW[37]                               = 0.0000
-ESS_kW[38]                               = 0.0000
-ESS_kW[39]                               = 0.0000
-ESS_kW[40]                               = 0.0000
-ESS_kW[41]                               = 0.0000
-ESS_kW[42]                               = 0.0000
-ESS_kW[43]                               = 0.0000
-ESS_kW[44]                               = 0.0000
-ESS_kW[45]                               = 0.0000
-ESS_kW[46]                               = 0.0000
-ESS_kW[47]                               = 0.0000
-ESS_kW[48]                               = 0.0000
-ESS_kW[49]                               = 0.0000
-ESS_kW[50]                               = 0.0000
-ESS_kW[51]                               = 0.0000
-ESS_kW[52]                               = 0.0000
-ESS_kW[53]                               = 0.0000
-ESS_kW[54]                               = 0.0000
-ESS_kW[55]                               = 0.0000
-ESS_kW[56]                               = 0.0000
-ESS_kW[57]                               = 0.0000
-ESS_kW[58]                               = 0.0000
-ESS_kW[59]                               = 0.0000
-ESS_kW[60]                               = 0.0000
-ESS_kW[61]                               = 0.0000
-ESS_kW[62]                               = 0.0000
-ESS_kW[63]                               = 0.0000
-ESS_kW[64]                               = 0.0000
-ESS_kW[65]                               = 0.0000
-ESS_kW[66]                               = 0.0000
-ESS_kW[67]                               = 0.0000
-ESS_kW[68]                               = 0.0000
-ESS_kW[69]                               = 0.0000
-ESS_kW[70]                               = 0.0000
+ESS_kW[16]                               = 27.4178
+ESS_kW[17]                               = 22.0625
+ESS_kW[18]                               = 17.0912
+ESS_kW[19]                               = 7.6048
+ESS_kW[20]                               = 4.6566
+ESS_kW[21]                               = 2.0255
+ESS_kW[22]                               = -0.2915
+ESS_kW[23]                               = -1.2616
+ESS_kW[24]                               = -3.7510
+ESS_kW[25]                               = -4.7056
+ESS_kW[26]                               = -4.7056
+ESS_kW[27]                               = -4.7056
+ESS_kW[28]                               = -4.7056
+ESS_kW[29]                               = -4.7056
+ESS_kW[30]                               = -4.7056
+ESS_kW[31]                               = -4.7056
+ESS_kW[32]                               = -4.7056
+ESS_kW[33]                               = -4.7056
+ESS_kW[34]                               = -4.7056
+ESS_kW[35]                               = -4.7056
+ESS_kW[36]                               = -4.7056
+ESS_kW[37]                               = -4.7056
+ESS_kW[38]                               = -4.7056
+ESS_kW[39]                               = -4.7056
+ESS_kW[40]                               = -4.7056
+ESS_kW[41]                               = -4.7056
+ESS_kW[42]                               = -4.7056
+ESS_kW[43]                               = -4.7056
+ESS_kW[44]                               = -4.7056
+ESS_kW[45]                               = -4.7056
+ESS_kW[46]                               = -4.7056
+ESS_kW[47]                               = -4.7056
+ESS_kW[48]                               = -4.7056
+ESS_kW[49]                               = -4.7056
+ESS_kW[50]                               = -4.7056
+ESS_kW[51]                               = -4.7056
+ESS_kW[52]                               = -4.7056
+ESS_kW[53]                               = -4.7056
+ESS_kW[54]                               = -4.7056
+ESS_kW[55]                               = -4.7056
+ESS_kW[56]                               = -4.7056
+ESS_kW[57]                               = -4.7056
+ESS_kW[58]                               = -4.7056
+ESS_kW[59]                               = -4.7056
+ESS_kW[60]                               = -4.7056
+ESS_kW[61]                               = -4.7056
+ESS_kW[62]                               = -4.7056
+ESS_kW[63]                               = -4.7056
+ESS_kW[64]                               = -4.7056
+ESS_kW[65]                               = -4.4907
+ESS_kW[66]                               = -2.1055
+ESS_kW[67]                               = 2.0243
+ESS_kW[68]                               = 6.0367
+ESS_kW[69]                               = 10.6119
+ESS_kW[70]                               = 15.7608
 ESS_kW[71]                               = 0.0000
 ESS_kW[72]                               = 0.0000
 ESS_kW[73]                               = 0.0000
@@ -692,36 +692,36 @@ ESS_kW[110]                              = 0.0000
 ESS_kW[111]                              = 0.0000
 ESS_kW[112]                              = 0.0000
 ESS_kW[113]                              = 0.0000
-ESS_kW[114]                              = 0.0000
+ESS_kW[114]                              = -175.0000
 ESS_kW[115]                              = 0.0000
-ESS_kW[116]                              = 0.0000
+ESS_kW[116]                              = -106.7315
 ESS_kW[117]                              = 0.0000
 ESS_kW[118]                              = 0.0000
 ESS_kW[119]                              = 0.0000
-ESS_kW[120]                              = 0.0000
-ESS_kW[121]                              = 0.0000
-ESS_kW[122]                              = 0.0000
-ESS_kW[123]                              = 0.0000
-ESS_kW[124]                              = 0.0000
-ESS_kW[125]                              = 0.0000
-ESS_kW[126]                              = 0.0000
-ESS_kW[127]                              = 0.0000
-ESS_kW[128]                              = 0.0000
-ESS_kW[129]                              = 0.0000
-ESS_kW[130]                              = 0.0000
-ESS_kW[131]                              = 0.0000
-ESS_kW[132]                              = 0.0000
-ESS_kW[133]                              = 0.0000
-ESS_kW[134]                              = 0.0000
-ESS_kW[135]                              = 0.0000
-ESS_kW[136]                              = 0.0000
-ESS_kW[137]                              = 0.0000
-ESS_kW[138]                              = 0.0000
-ESS_kW[139]                              = -0.0000
-ESS_kW[140]                              = 0.0000
-ESS_kW[141]                              = 0.0000
-ESS_kW[142]                              = 0.0000
-ESS_kW[143]                              = -0.0000
+ESS_kW[120]                              = 12.3582
+ESS_kW[121]                              = -4.7056
+ESS_kW[122]                              = -4.7056
+ESS_kW[123]                              = -4.7056
+ESS_kW[124]                              = -4.7056
+ESS_kW[125]                              = -4.7056
+ESS_kW[126]                              = -4.7056
+ESS_kW[127]                              = -4.7056
+ESS_kW[128]                              = -4.7056
+ESS_kW[129]                              = -4.7056
+ESS_kW[130]                              = -4.7056
+ESS_kW[131]                              = -4.7056
+ESS_kW[132]                              = -4.7056
+ESS_kW[133]                              = -4.7056
+ESS_kW[134]                              = -4.7056
+ESS_kW[135]                              = -4.7056
+ESS_kW[136]                              = -4.7056
+ESS_kW[137]                              = -4.7056
+ESS_kW[138]                              = -4.7056
+ESS_kW[139]                              = -4.7056
+ESS_kW[140]                              = -4.7056
+ESS_kW[141]                              = -4.7056
+ESS_kW[142]                              = -4.7056
+ESS_kW[143]                              = -4.7056
 ESS_kW_charge[0]                         = 0.0000
 ESS_kW_charge[1]                         = 0.0000
 ESS_kW_charge[2]                         = 0.0000
@@ -730,20 +730,20 @@ ESS_kW_charge[4]                         = 0.0000
 ESS_kW_charge[5]                         = 0.0000
 ESS_kW_charge[6]                         = 0.0000
 ESS_kW_charge[7]                         = 0.0000
-ESS_kW_charge[8]                         = 0.0000
-ESS_kW_charge[9]                         = 0.0000
-ESS_kW_charge[10]                        = 0.0000
+ESS_kW_charge[8]                         = 167.2757
+ESS_kW_charge[9]                         = 154.2320
+ESS_kW_charge[10]                        = 140.9249
 ESS_kW_charge[11]                        = 0.0000
 ESS_kW_charge[12]                        = 0.0000
 ESS_kW_charge[13]                        = 0.0000
 ESS_kW_charge[14]                        = 0.0000
 ESS_kW_charge[15]                        = 0.0000
-ESS_kW_charge[16]                        = 0.0000
-ESS_kW_charge[17]                        = 0.0000
-ESS_kW_charge[18]                        = 0.0000
-ESS_kW_charge[19]                        = 0.0000
-ESS_kW_charge[20]                        = 0.0000
-ESS_kW_charge[21]                        = 0.0000
+ESS_kW_charge[16]                        = 27.4178
+ESS_kW_charge[17]                        = 22.0625
+ESS_kW_charge[18]                        = 17.0912
+ESS_kW_charge[19]                        = 7.6048
+ESS_kW_charge[20]                        = 4.6566
+ESS_kW_charge[21]                        = 2.0255
 ESS_kW_charge[22]                        = 0.0000
 ESS_kW_charge[23]                        = 0.0000
 ESS_kW_charge[24]                        = 0.0000
@@ -789,10 +789,10 @@ ESS_kW_charge[63]                        = 0.0000
 ESS_kW_charge[64]                        = 0.0000
 ESS_kW_charge[65]                        = 0.0000
 ESS_kW_charge[66]                        = 0.0000
-ESS_kW_charge[67]                        = 0.0000
-ESS_kW_charge[68]                        = 0.0000
-ESS_kW_charge[69]                        = 0.0000
-ESS_kW_charge[70]                        = 0.0000
+ESS_kW_charge[67]                        = 2.0243
+ESS_kW_charge[68]                        = 6.0367
+ESS_kW_charge[69]                        = 10.6119
+ESS_kW_charge[70]                        = 15.7608
 ESS_kW_charge[71]                        = 0.0000
 ESS_kW_charge[72]                        = 0.0000
 ESS_kW_charge[73]                        = 0.0000
@@ -842,7 +842,7 @@ ESS_kW_charge[116]                       = 0.0000
 ESS_kW_charge[117]                       = 0.0000
 ESS_kW_charge[118]                       = 0.0000
 ESS_kW_charge[119]                       = 0.0000
-ESS_kW_charge[120]                       = 0.0000
+ESS_kW_charge[120]                       = 12.3582
 ESS_kW_charge[121]                       = 0.0000
 ESS_kW_charge[122]                       = 0.0000
 ESS_kW_charge[123]                       = 0.0000
@@ -888,51 +888,51 @@ ESS_kW_discharge[18]                     = 0.0000
 ESS_kW_discharge[19]                     = 0.0000
 ESS_kW_discharge[20]                     = 0.0000
 ESS_kW_discharge[21]                     = 0.0000
-ESS_kW_discharge[22]                     = 0.0000
-ESS_kW_discharge[23]                     = 0.0000
-ESS_kW_discharge[24]                     = 0.0000
-ESS_kW_discharge[25]                     = 0.0000
-ESS_kW_discharge[26]                     = 0.0000
-ESS_kW_discharge[27]                     = 0.0000
-ESS_kW_discharge[28]                     = 0.0000
-ESS_kW_discharge[29]                     = 0.0000
-ESS_kW_discharge[30]                     = 0.0000
-ESS_kW_discharge[31]                     = 0.0000
-ESS_kW_discharge[32]                     = 0.0000
-ESS_kW_discharge[33]                     = 0.0000
-ESS_kW_discharge[34]                     = 0.0000
-ESS_kW_discharge[35]                     = 0.0000
-ESS_kW_discharge[36]                     = 0.0000
-ESS_kW_discharge[37]                     = 0.0000
-ESS_kW_discharge[38]                     = 0.0000
-ESS_kW_discharge[39]                     = 0.0000
-ESS_kW_discharge[40]                     = 0.0000
-ESS_kW_discharge[41]                     = 0.0000
-ESS_kW_discharge[42]                     = 0.0000
-ESS_kW_discharge[43]                     = 0.0000
-ESS_kW_discharge[44]                     = 0.0000
-ESS_kW_discharge[45]                     = 0.0000
-ESS_kW_discharge[46]                     = 0.0000
-ESS_kW_discharge[47]                     = 0.0000
-ESS_kW_discharge[48]                     = 0.0000
-ESS_kW_discharge[49]                     = 0.0000
-ESS_kW_discharge[50]                     = 0.0000
-ESS_kW_discharge[51]                     = 0.0000
-ESS_kW_discharge[52]                     = 0.0000
-ESS_kW_discharge[53]                     = 0.0000
-ESS_kW_discharge[54]                     = 0.0000
-ESS_kW_discharge[55]                     = 0.0000
-ESS_kW_discharge[56]                     = 0.0000
-ESS_kW_discharge[57]                     = 0.0000
-ESS_kW_discharge[58]                     = 0.0000
-ESS_kW_discharge[59]                     = 0.0000
-ESS_kW_discharge[60]                     = 0.0000
-ESS_kW_discharge[61]                     = 0.0000
-ESS_kW_discharge[62]                     = 0.0000
-ESS_kW_discharge[63]                     = 0.0000
-ESS_kW_discharge[64]                     = 0.0000
-ESS_kW_discharge[65]                     = 0.0000
-ESS_kW_discharge[66]                     = 0.0000
+ESS_kW_discharge[22]                     = 0.2915
+ESS_kW_discharge[23]                     = 1.2616
+ESS_kW_discharge[24]                     = 3.7510
+ESS_kW_discharge[25]                     = 4.7056
+ESS_kW_discharge[26]                     = 4.7056
+ESS_kW_discharge[27]                     = 4.7056
+ESS_kW_discharge[28]                     = 4.7056
+ESS_kW_discharge[29]                     = 4.7056
+ESS_kW_discharge[30]                     = 4.7056
+ESS_kW_discharge[31]                     = 4.7056
+ESS_kW_discharge[32]                     = 4.7056
+ESS_kW_discharge[33]                     = 4.7056
+ESS_kW_discharge[34]                     = 4.7056
+ESS_kW_discharge[35]                     = 4.7056
+ESS_kW_discharge[36]                     = 4.7056
+ESS_kW_discharge[37]                     = 4.7056
+ESS_kW_discharge[38]                     = 4.7056
+ESS_kW_discharge[39]                     = 4.7056
+ESS_kW_discharge[40]                     = 4.7056
+ESS_kW_discharge[41]                     = 4.7056
+ESS_kW_discharge[42]                     = 4.7056
+ESS_kW_discharge[43]                     = 4.7056
+ESS_kW_discharge[44]                     = 4.7056
+ESS_kW_discharge[45]                     = 4.7056
+ESS_kW_discharge[46]                     = 4.7056
+ESS_kW_discharge[47]                     = 4.7056
+ESS_kW_discharge[48]                     = 4.7056
+ESS_kW_discharge[49]                     = 4.7056
+ESS_kW_discharge[50]                     = 4.7056
+ESS_kW_discharge[51]                     = 4.7056
+ESS_kW_discharge[52]                     = 4.7056
+ESS_kW_discharge[53]                     = 4.7056
+ESS_kW_discharge[54]                     = 4.7056
+ESS_kW_discharge[55]                     = 4.7056
+ESS_kW_discharge[56]                     = 4.7056
+ESS_kW_discharge[57]                     = 4.7056
+ESS_kW_discharge[58]                     = 4.7056
+ESS_kW_discharge[59]                     = 4.7056
+ESS_kW_discharge[60]                     = 4.7056
+ESS_kW_discharge[61]                     = 4.7056
+ESS_kW_discharge[62]                     = 4.7056
+ESS_kW_discharge[63]                     = 4.7056
+ESS_kW_discharge[64]                     = 4.7056
+ESS_kW_discharge[65]                     = 4.4907
+ESS_kW_discharge[66]                     = 2.1055
 ESS_kW_discharge[67]                     = 0.0000
 ESS_kW_discharge[68]                     = 0.0000
 ESS_kW_discharge[69]                     = 0.0000
@@ -980,36 +980,36 @@ ESS_kW_discharge[110]                    = 0.0000
 ESS_kW_discharge[111]                    = 0.0000
 ESS_kW_discharge[112]                    = 0.0000
 ESS_kW_discharge[113]                    = 0.0000
-ESS_kW_discharge[114]                    = 0.0000
+ESS_kW_discharge[114]                    = 175.0000
 ESS_kW_discharge[115]                    = 0.0000
-ESS_kW_discharge[116]                    = 0.0000
+ESS_kW_discharge[116]                    = 106.7315
 ESS_kW_discharge[117]                    = 0.0000
 ESS_kW_discharge[118]                    = 0.0000
 ESS_kW_discharge[119]                    = 0.0000
 ESS_kW_discharge[120]                    = 0.0000
-ESS_kW_discharge[121]                    = 0.0000
-ESS_kW_discharge[122]                    = 0.0000
-ESS_kW_discharge[123]                    = 0.0000
-ESS_kW_discharge[124]                    = 0.0000
-ESS_kW_discharge[125]                    = 0.0000
-ESS_kW_discharge[126]                    = 0.0000
-ESS_kW_discharge[127]                    = 0.0000
-ESS_kW_discharge[128]                    = 0.0000
-ESS_kW_discharge[129]                    = 0.0000
-ESS_kW_discharge[130]                    = 0.0000
-ESS_kW_discharge[131]                    = 0.0000
-ESS_kW_discharge[132]                    = 0.0000
-ESS_kW_discharge[133]                    = 0.0000
-ESS_kW_discharge[134]                    = 0.0000
-ESS_kW_discharge[135]                    = 0.0000
-ESS_kW_discharge[136]                    = 0.0000
-ESS_kW_discharge[137]                    = 0.0000
-ESS_kW_discharge[138]                    = 0.0000
-ESS_kW_discharge[139]                    = 0.0000
-ESS_kW_discharge[140]                    = 0.0000
-ESS_kW_discharge[141]                    = 0.0000
-ESS_kW_discharge[142]                    = 0.0000
-ESS_kW_discharge[143]                    = 0.0000
+ESS_kW_discharge[121]                    = 4.7056
+ESS_kW_discharge[122]                    = 4.7056
+ESS_kW_discharge[123]                    = 4.7056
+ESS_kW_discharge[124]                    = 4.7056
+ESS_kW_discharge[125]                    = 4.7056
+ESS_kW_discharge[126]                    = 4.7056
+ESS_kW_discharge[127]                    = 4.7056
+ESS_kW_discharge[128]                    = 4.7056
+ESS_kW_discharge[129]                    = 4.7056
+ESS_kW_discharge[130]                    = 4.7056
+ESS_kW_discharge[131]                    = 4.7056
+ESS_kW_discharge[132]                    = 4.7056
+ESS_kW_discharge[133]                    = 4.7056
+ESS_kW_discharge[134]                    = 4.7056
+ESS_kW_discharge[135]                    = 4.7056
+ESS_kW_discharge[136]                    = 4.7056
+ESS_kW_discharge[137]                    = 4.7056
+ESS_kW_discharge[138]                    = 4.7056
+ESS_kW_discharge[139]                    = 4.7056
+ESS_kW_discharge[140]                    = 4.7056
+ESS_kW_discharge[141]                    = 4.7056
+ESS_kW_discharge[142]                    = 4.7056
+ESS_kW_discharge[143]                    = 4.7056
 ESS_kW_charge_z[0]                       = 0.0000
 ESS_kW_charge_z[1]                       = 0.0000
 ESS_kW_charge_z[2]                       = 0.0000
@@ -1018,20 +1018,20 @@ ESS_kW_charge_z[4]                       = 0.0000
 ESS_kW_charge_z[5]                       = 0.0000
 ESS_kW_charge_z[6]                       = 0.0000
 ESS_kW_charge_z[7]                       = 0.0000
-ESS_kW_charge_z[8]                       = 0.0000
-ESS_kW_charge_z[9]                       = 0.0000
-ESS_kW_charge_z[10]                      = 0.0000
+ESS_kW_charge_z[8]                       = 1.0000
+ESS_kW_charge_z[9]                       = 1.0000
+ESS_kW_charge_z[10]                      = 1.0000
 ESS_kW_charge_z[11]                      = 0.0000
 ESS_kW_charge_z[12]                      = 0.0000
 ESS_kW_charge_z[13]                      = 0.0000
 ESS_kW_charge_z[14]                      = 0.0000
 ESS_kW_charge_z[15]                      = 0.0000
-ESS_kW_charge_z[16]                      = 0.0000
-ESS_kW_charge_z[17]                      = 0.0000
-ESS_kW_charge_z[18]                      = 0.0000
-ESS_kW_charge_z[19]                      = 0.0000
-ESS_kW_charge_z[20]                      = 0.0000
-ESS_kW_charge_z[21]                      = 0.0000
+ESS_kW_charge_z[16]                      = 1.0000
+ESS_kW_charge_z[17]                      = 1.0000
+ESS_kW_charge_z[18]                      = 1.0000
+ESS_kW_charge_z[19]                      = 1.0000
+ESS_kW_charge_z[20]                      = 1.0000
+ESS_kW_charge_z[21]                      = 1.0000
 ESS_kW_charge_z[22]                      = 0.0000
 ESS_kW_charge_z[23]                      = 0.0000
 ESS_kW_charge_z[24]                      = 0.0000
@@ -1077,10 +1077,10 @@ ESS_kW_charge_z[63]                      = 0.0000
 ESS_kW_charge_z[64]                      = 0.0000
 ESS_kW_charge_z[65]                      = 0.0000
 ESS_kW_charge_z[66]                      = 0.0000
-ESS_kW_charge_z[67]                      = 0.0000
-ESS_kW_charge_z[68]                      = 0.0000
-ESS_kW_charge_z[69]                      = 0.0000
-ESS_kW_charge_z[70]                      = 0.0000
+ESS_kW_charge_z[67]                      = 1.0000
+ESS_kW_charge_z[68]                      = 1.0000
+ESS_kW_charge_z[69]                      = 1.0000
+ESS_kW_charge_z[70]                      = 1.0000
 ESS_kW_charge_z[71]                      = 0.0000
 ESS_kW_charge_z[72]                      = 0.0000
 ESS_kW_charge_z[73]                      = 0.0000
@@ -1130,7 +1130,7 @@ ESS_kW_charge_z[116]                     = 0.0000
 ESS_kW_charge_z[117]                     = 0.0000
 ESS_kW_charge_z[118]                     = 0.0000
 ESS_kW_charge_z[119]                     = 0.0000
-ESS_kW_charge_z[120]                     = 0.0000
+ESS_kW_charge_z[120]                     = 1.0000
 ESS_kW_charge_z[121]                     = 0.0000
 ESS_kW_charge_z[122]                     = 0.0000
 ESS_kW_charge_z[123]                     = 0.0000
@@ -1176,51 +1176,51 @@ ESS_kW_discharge_z[18]                   = 0.0000
 ESS_kW_discharge_z[19]                   = 0.0000
 ESS_kW_discharge_z[20]                   = 0.0000
 ESS_kW_discharge_z[21]                   = 0.0000
-ESS_kW_discharge_z[22]                   = 0.0000
-ESS_kW_discharge_z[23]                   = 0.0000
-ESS_kW_discharge_z[24]                   = 0.0000
-ESS_kW_discharge_z[25]                   = 0.0000
-ESS_kW_discharge_z[26]                   = 0.0000
-ESS_kW_discharge_z[27]                   = 0.0000
-ESS_kW_discharge_z[28]                   = 0.0000
-ESS_kW_discharge_z[29]                   = 0.0000
-ESS_kW_discharge_z[30]                   = 0.0000
-ESS_kW_discharge_z[31]                   = 0.0000
-ESS_kW_discharge_z[32]                   = 0.0000
-ESS_kW_discharge_z[33]                   = 0.0000
-ESS_kW_discharge_z[34]                   = 0.0000
-ESS_kW_discharge_z[35]                   = 0.0000
-ESS_kW_discharge_z[36]                   = 0.0000
-ESS_kW_discharge_z[37]                   = 0.0000
-ESS_kW_discharge_z[38]                   = 0.0000
-ESS_kW_discharge_z[39]                   = 0.0000
-ESS_kW_discharge_z[40]                   = 0.0000
-ESS_kW_discharge_z[41]                   = 0.0000
-ESS_kW_discharge_z[42]                   = 0.0000
-ESS_kW_discharge_z[43]                   = 0.0000
-ESS_kW_discharge_z[44]                   = 0.0000
-ESS_kW_discharge_z[45]                   = 0.0000
-ESS_kW_discharge_z[46]                   = 0.0000
-ESS_kW_discharge_z[47]                   = 0.0000
-ESS_kW_discharge_z[48]                   = 0.0000
-ESS_kW_discharge_z[49]                   = 0.0000
-ESS_kW_discharge_z[50]                   = 0.0000
-ESS_kW_discharge_z[51]                   = 0.0000
-ESS_kW_discharge_z[52]                   = 0.0000
-ESS_kW_discharge_z[53]                   = 0.0000
-ESS_kW_discharge_z[54]                   = 0.0000
-ESS_kW_discharge_z[55]                   = 0.0000
-ESS_kW_discharge_z[56]                   = 0.0000
-ESS_kW_discharge_z[57]                   = 0.0000
-ESS_kW_discharge_z[58]                   = 0.0000
-ESS_kW_discharge_z[59]                   = 0.0000
-ESS_kW_discharge_z[60]                   = 0.0000
-ESS_kW_discharge_z[61]                   = 0.0000
-ESS_kW_discharge_z[62]                   = 0.0000
-ESS_kW_discharge_z[63]                   = 0.0000
-ESS_kW_discharge_z[64]                   = 0.0000
-ESS_kW_discharge_z[65]                   = 0.0000
-ESS_kW_discharge_z[66]                   = 0.0000
+ESS_kW_discharge_z[22]                   = 1.0000
+ESS_kW_discharge_z[23]                   = 1.0000
+ESS_kW_discharge_z[24]                   = 1.0000
+ESS_kW_discharge_z[25]                   = 1.0000
+ESS_kW_discharge_z[26]                   = 1.0000
+ESS_kW_discharge_z[27]                   = 1.0000
+ESS_kW_discharge_z[28]                   = 1.0000
+ESS_kW_discharge_z[29]                   = 1.0000
+ESS_kW_discharge_z[30]                   = 1.0000
+ESS_kW_discharge_z[31]                   = 1.0000
+ESS_kW_discharge_z[32]                   = 1.0000
+ESS_kW_discharge_z[33]                   = 1.0000
+ESS_kW_discharge_z[34]                   = 1.0000
+ESS_kW_discharge_z[35]                   = 1.0000
+ESS_kW_discharge_z[36]                   = 1.0000
+ESS_kW_discharge_z[37]                   = 1.0000
+ESS_kW_discharge_z[38]                   = 1.0000
+ESS_kW_discharge_z[39]                   = 1.0000
+ESS_kW_discharge_z[40]                   = 1.0000
+ESS_kW_discharge_z[41]                   = 1.0000
+ESS_kW_discharge_z[42]                   = 1.0000
+ESS_kW_discharge_z[43]                   = 1.0000
+ESS_kW_discharge_z[44]                   = 1.0000
+ESS_kW_discharge_z[45]                   = 1.0000
+ESS_kW_discharge_z[46]                   = 1.0000
+ESS_kW_discharge_z[47]                   = 1.0000
+ESS_kW_discharge_z[48]                   = 1.0000
+ESS_kW_discharge_z[49]                   = 1.0000
+ESS_kW_discharge_z[50]                   = 1.0000
+ESS_kW_discharge_z[51]                   = 1.0000
+ESS_kW_discharge_z[52]                   = 1.0000
+ESS_kW_discharge_z[53]                   = 1.0000
+ESS_kW_discharge_z[54]                   = 1.0000
+ESS_kW_discharge_z[55]                   = 1.0000
+ESS_kW_discharge_z[56]                   = 1.0000
+ESS_kW_discharge_z[57]                   = 1.0000
+ESS_kW_discharge_z[58]                   = 1.0000
+ESS_kW_discharge_z[59]                   = 1.0000
+ESS_kW_discharge_z[60]                   = 1.0000
+ESS_kW_discharge_z[61]                   = 1.0000
+ESS_kW_discharge_z[62]                   = 1.0000
+ESS_kW_discharge_z[63]                   = 1.0000
+ESS_kW_discharge_z[64]                   = 1.0000
+ESS_kW_discharge_z[65]                   = 1.0000
+ESS_kW_discharge_z[66]                   = 1.0000
 ESS_kW_discharge_z[67]                   = 0.0000
 ESS_kW_discharge_z[68]                   = 0.0000
 ESS_kW_discharge_z[69]                   = 0.0000
@@ -1268,199 +1268,199 @@ ESS_kW_discharge_z[110]                  = 0.0000
 ESS_kW_discharge_z[111]                  = 0.0000
 ESS_kW_discharge_z[112]                  = 0.0000
 ESS_kW_discharge_z[113]                  = 0.0000
-ESS_kW_discharge_z[114]                  = 0.0000
+ESS_kW_discharge_z[114]                  = 1.0000
 ESS_kW_discharge_z[115]                  = 0.0000
-ESS_kW_discharge_z[116]                  = 0.0000
+ESS_kW_discharge_z[116]                  = 1.0000
 ESS_kW_discharge_z[117]                  = 0.0000
 ESS_kW_discharge_z[118]                  = 0.0000
 ESS_kW_discharge_z[119]                  = 0.0000
 ESS_kW_discharge_z[120]                  = 0.0000
-ESS_kW_discharge_z[121]                  = 0.0000
-ESS_kW_discharge_z[122]                  = 0.0000
-ESS_kW_discharge_z[123]                  = 0.0000
-ESS_kW_discharge_z[124]                  = 0.0000
-ESS_kW_discharge_z[125]                  = 0.0000
-ESS_kW_discharge_z[126]                  = 0.0000
-ESS_kW_discharge_z[127]                  = 0.0000
-ESS_kW_discharge_z[128]                  = 0.0000
-ESS_kW_discharge_z[129]                  = 0.0000
-ESS_kW_discharge_z[130]                  = 0.0000
-ESS_kW_discharge_z[131]                  = 0.0000
-ESS_kW_discharge_z[132]                  = 0.0000
-ESS_kW_discharge_z[133]                  = 0.0000
-ESS_kW_discharge_z[134]                  = 0.0000
-ESS_kW_discharge_z[135]                  = 0.0000
-ESS_kW_discharge_z[136]                  = 0.0000
-ESS_kW_discharge_z[137]                  = 0.0000
-ESS_kW_discharge_z[138]                  = 0.0000
-ESS_kW_discharge_z[139]                  = 0.0000
-ESS_kW_discharge_z[140]                  = 0.0000
-ESS_kW_discharge_z[141]                  = 0.0000
-ESS_kW_discharge_z[142]                  = 0.0000
-ESS_kW_discharge_z[143]                  = 0.0000
-ESS_SoC[0]                               = 0.2532
-ESS_SoC[1]                               = 0.2532
-ESS_SoC[2]                               = 0.2532
-ESS_SoC[3]                               = 0.2532
-ESS_SoC[4]                               = 0.2532
-ESS_SoC[5]                               = 0.2532
-ESS_SoC[6]                               = 0.2532
-ESS_SoC[7]                               = 0.2532
-ESS_SoC[8]                               = 0.2532
-ESS_SoC[9]                               = 0.2532
-ESS_SoC[10]                              = 0.2532
-ESS_SoC[11]                              = 0.2532
-ESS_SoC[12]                              = 0.2532
-ESS_SoC[13]                              = 0.2532
-ESS_SoC[14]                              = 0.2532
-ESS_SoC[15]                              = 0.2532
-ESS_SoC[16]                              = 0.2532
-ESS_SoC[17]                              = 0.2532
-ESS_SoC[18]                              = 0.2532
-ESS_SoC[19]                              = 0.2532
-ESS_SoC[20]                              = 0.2532
-ESS_SoC[21]                              = 0.2532
-ESS_SoC[22]                              = 0.2532
-ESS_SoC[23]                              = 0.2532
-ESS_SoC[24]                              = 0.2532
-ESS_SoC[25]                              = 0.2532
-ESS_SoC[26]                              = 0.2532
-ESS_SoC[27]                              = 0.2532
-ESS_SoC[28]                              = 0.2532
-ESS_SoC[29]                              = 0.2532
-ESS_SoC[30]                              = 0.2532
-ESS_SoC[31]                              = 0.2532
-ESS_SoC[32]                              = 0.2532
-ESS_SoC[33]                              = 0.2532
-ESS_SoC[34]                              = 0.2532
-ESS_SoC[35]                              = 0.2532
-ESS_SoC[36]                              = 0.2532
-ESS_SoC[37]                              = 0.2532
-ESS_SoC[38]                              = 0.2532
-ESS_SoC[39]                              = 0.2532
-ESS_SoC[40]                              = 0.2532
-ESS_SoC[41]                              = 0.2532
-ESS_SoC[42]                              = 0.2532
-ESS_SoC[43]                              = 0.2532
-ESS_SoC[44]                              = 0.2532
-ESS_SoC[45]                              = 0.2532
-ESS_SoC[46]                              = 0.2532
-ESS_SoC[47]                              = 0.2532
-ESS_SoC[48]                              = 0.2532
-ESS_SoC[49]                              = 0.2532
-ESS_SoC[50]                              = 0.2532
-ESS_SoC[51]                              = 0.2532
-ESS_SoC[52]                              = 0.2532
-ESS_SoC[53]                              = 0.2532
-ESS_SoC[54]                              = 0.2532
-ESS_SoC[55]                              = 0.2532
-ESS_SoC[56]                              = 0.2532
-ESS_SoC[57]                              = 0.2532
-ESS_SoC[58]                              = 0.2532
-ESS_SoC[59]                              = 0.2532
-ESS_SoC[60]                              = 0.2532
-ESS_SoC[61]                              = 0.2532
-ESS_SoC[62]                              = 0.2532
-ESS_SoC[63]                              = 0.2532
-ESS_SoC[64]                              = 0.2532
-ESS_SoC[65]                              = 0.2532
-ESS_SoC[66]                              = 0.2532
-ESS_SoC[67]                              = 0.2532
-ESS_SoC[68]                              = 0.2532
-ESS_SoC[69]                              = 0.2532
-ESS_SoC[70]                              = 0.2532
-ESS_SoC[71]                              = 0.2532
-ESS_SoC[72]                              = 0.2532
-ESS_SoC[73]                              = 0.2532
-ESS_SoC[74]                              = 0.2532
-ESS_SoC[75]                              = 0.2532
-ESS_SoC[76]                              = 0.2532
-ESS_SoC[77]                              = 0.2532
-ESS_SoC[78]                              = 0.2532
-ESS_SoC[79]                              = 0.2532
-ESS_SoC[80]                              = 0.2532
-ESS_SoC[81]                              = 0.2532
-ESS_SoC[82]                              = 0.2532
-ESS_SoC[83]                              = 0.2532
-ESS_SoC[84]                              = 0.2532
-ESS_SoC[85]                              = 0.2532
-ESS_SoC[86]                              = 0.2532
-ESS_SoC[87]                              = 0.2532
-ESS_SoC[88]                              = 0.2532
-ESS_SoC[89]                              = 0.2532
-ESS_SoC[90]                              = 0.2532
-ESS_SoC[91]                              = 0.2532
-ESS_SoC[92]                              = 0.2532
-ESS_SoC[93]                              = 0.2532
-ESS_SoC[94]                              = 0.2532
-ESS_SoC[95]                              = 0.2532
-ESS_SoC[96]                              = 0.2532
-ESS_SoC[97]                              = 0.2532
-ESS_SoC[98]                              = 0.2532
-ESS_SoC[99]                              = 0.2532
-ESS_SoC[100]                             = 0.2532
-ESS_SoC[101]                             = 0.2532
-ESS_SoC[102]                             = 0.2532
-ESS_SoC[103]                             = 0.2532
-ESS_SoC[104]                             = 0.2532
-ESS_SoC[105]                             = 0.2532
-ESS_SoC[106]                             = 0.2532
-ESS_SoC[107]                             = 0.2532
-ESS_SoC[108]                             = 0.2532
-ESS_SoC[109]                             = 0.2532
-ESS_SoC[110]                             = 0.2532
-ESS_SoC[111]                             = 0.2532
-ESS_SoC[112]                             = 0.2532
-ESS_SoC[113]                             = 0.2532
-ESS_SoC[114]                             = 0.2532
-ESS_SoC[115]                             = 0.2532
-ESS_SoC[116]                             = 0.2532
-ESS_SoC[117]                             = 0.2532
-ESS_SoC[118]                             = 0.2532
-ESS_SoC[119]                             = 0.2532
-ESS_SoC[120]                             = 0.2532
-ESS_SoC[121]                             = 0.2532
-ESS_SoC[122]                             = 0.2532
-ESS_SoC[123]                             = 0.2532
-ESS_SoC[124]                             = 0.2532
-ESS_SoC[125]                             = 0.2532
-ESS_SoC[126]                             = 0.2532
-ESS_SoC[127]                             = 0.2532
-ESS_SoC[128]                             = 0.2532
-ESS_SoC[129]                             = 0.2532
-ESS_SoC[130]                             = 0.2532
-ESS_SoC[131]                             = 0.2532
-ESS_SoC[132]                             = 0.2532
-ESS_SoC[133]                             = 0.2532
-ESS_SoC[134]                             = 0.2532
-ESS_SoC[135]                             = 0.2532
-ESS_SoC[136]                             = 0.2532
-ESS_SoC[137]                             = 0.2532
-ESS_SoC[138]                             = 0.2532
-ESS_SoC[139]                             = 0.2532
-ESS_SoC[140]                             = 0.2532
-ESS_SoC[141]                             = 0.2532
-ESS_SoC[142]                             = 0.2532
-ESS_SoC[143]                             = 0.2532
+ESS_kW_discharge_z[121]                  = 1.0000
+ESS_kW_discharge_z[122]                  = 1.0000
+ESS_kW_discharge_z[123]                  = 1.0000
+ESS_kW_discharge_z[124]                  = 1.0000
+ESS_kW_discharge_z[125]                  = 1.0000
+ESS_kW_discharge_z[126]                  = 1.0000
+ESS_kW_discharge_z[127]                  = 1.0000
+ESS_kW_discharge_z[128]                  = 1.0000
+ESS_kW_discharge_z[129]                  = 1.0000
+ESS_kW_discharge_z[130]                  = 1.0000
+ESS_kW_discharge_z[131]                  = 1.0000
+ESS_kW_discharge_z[132]                  = 1.0000
+ESS_kW_discharge_z[133]                  = 1.0000
+ESS_kW_discharge_z[134]                  = 1.0000
+ESS_kW_discharge_z[135]                  = 1.0000
+ESS_kW_discharge_z[136]                  = 1.0000
+ESS_kW_discharge_z[137]                  = 1.0000
+ESS_kW_discharge_z[138]                  = 1.0000
+ESS_kW_discharge_z[139]                  = 1.0000
+ESS_kW_discharge_z[140]                  = 1.0000
+ESS_kW_discharge_z[141]                  = 1.0000
+ESS_kW_discharge_z[142]                  = 1.0000
+ESS_kW_discharge_z[143]                  = 1.0000
+ESS_SoC[0]                               = 0.0413
+ESS_SoC[1]                               = 0.0413
+ESS_SoC[2]                               = 0.0413
+ESS_SoC[3]                               = 0.0413
+ESS_SoC[4]                               = 0.0413
+ESS_SoC[5]                               = 0.0413
+ESS_SoC[6]                               = 0.0413
+ESS_SoC[7]                               = 0.0413
+ESS_SoC[8]                               = 0.0413
+ESS_SoC[9]                               = 14.7662
+ESS_SoC[10]                              = 28.3430
+ESS_SoC[11]                              = 40.7484
+ESS_SoC[12]                              = 40.7484
+ESS_SoC[13]                              = 40.7484
+ESS_SoC[14]                              = 40.7484
+ESS_SoC[15]                              = 40.7484
+ESS_SoC[16]                              = 40.7484
+ESS_SoC[17]                              = 43.1619
+ESS_SoC[18]                              = 45.1040
+ESS_SoC[19]                              = 46.6085
+ESS_SoC[20]                              = 47.2780
+ESS_SoC[21]                              = 47.6879
+ESS_SoC[22]                              = 47.8662
+ESS_SoC[23]                              = 47.8405
+ESS_SoC[24]                              = 47.7295
+ESS_SoC[25]                              = 47.3993
+ESS_SoC[26]                              = 46.9851
+ESS_SoC[27]                              = 46.5708
+ESS_SoC[28]                              = 46.1566
+ESS_SoC[29]                              = 45.7424
+ESS_SoC[30]                              = 45.3282
+ESS_SoC[31]                              = 44.9139
+ESS_SoC[32]                              = 44.4997
+ESS_SoC[33]                              = 44.0855
+ESS_SoC[34]                              = 43.6713
+ESS_SoC[35]                              = 43.2571
+ESS_SoC[36]                              = 42.8428
+ESS_SoC[37]                              = 42.4286
+ESS_SoC[38]                              = 42.0144
+ESS_SoC[39]                              = 41.6002
+ESS_SoC[40]                              = 41.1859
+ESS_SoC[41]                              = 40.7717
+ESS_SoC[42]                              = 40.3575
+ESS_SoC[43]                              = 39.9433
+ESS_SoC[44]                              = 39.5290
+ESS_SoC[45]                              = 39.1148
+ESS_SoC[46]                              = 38.7006
+ESS_SoC[47]                              = 38.2864
+ESS_SoC[48]                              = 37.8722
+ESS_SoC[49]                              = 37.4579
+ESS_SoC[50]                              = 37.0437
+ESS_SoC[51]                              = 36.6295
+ESS_SoC[52]                              = 36.2153
+ESS_SoC[53]                              = 35.8010
+ESS_SoC[54]                              = 35.3868
+ESS_SoC[55]                              = 34.9726
+ESS_SoC[56]                              = 34.5584
+ESS_SoC[57]                              = 34.1441
+ESS_SoC[58]                              = 33.7299
+ESS_SoC[59]                              = 33.3157
+ESS_SoC[60]                              = 32.9015
+ESS_SoC[61]                              = 32.4872
+ESS_SoC[62]                              = 32.0730
+ESS_SoC[63]                              = 31.6588
+ESS_SoC[64]                              = 31.2446
+ESS_SoC[65]                              = 30.8304
+ESS_SoC[66]                              = 30.4350
+ESS_SoC[67]                              = 30.2497
+ESS_SoC[68]                              = 30.4279
+ESS_SoC[69]                              = 30.9593
+ESS_SoC[70]                              = 31.8934
+ESS_SoC[71]                              = 33.2808
+ESS_SoC[72]                              = 33.2808
+ESS_SoC[73]                              = 33.2808
+ESS_SoC[74]                              = 33.2808
+ESS_SoC[75]                              = 33.2808
+ESS_SoC[76]                              = 33.2808
+ESS_SoC[77]                              = 33.2808
+ESS_SoC[78]                              = 33.2808
+ESS_SoC[79]                              = 33.2808
+ESS_SoC[80]                              = 33.2808
+ESS_SoC[81]                              = 33.2808
+ESS_SoC[82]                              = 33.2808
+ESS_SoC[83]                              = 33.2808
+ESS_SoC[84]                              = 33.2808
+ESS_SoC[85]                              = 33.2808
+ESS_SoC[86]                              = 33.2808
+ESS_SoC[87]                              = 33.2808
+ESS_SoC[88]                              = 33.2808
+ESS_SoC[89]                              = 33.2808
+ESS_SoC[90]                              = 33.2808
+ESS_SoC[91]                              = 33.2808
+ESS_SoC[92]                              = 33.2808
+ESS_SoC[93]                              = 33.2808
+ESS_SoC[94]                              = 33.2808
+ESS_SoC[95]                              = 33.2808
+ESS_SoC[96]                              = 33.2808
+ESS_SoC[97]                              = 33.2808
+ESS_SoC[98]                              = 33.2808
+ESS_SoC[99]                              = 33.2808
+ESS_SoC[100]                             = 33.2808
+ESS_SoC[101]                             = 33.2808
+ESS_SoC[102]                             = 33.2808
+ESS_SoC[103]                             = 33.2808
+ESS_SoC[104]                             = 33.2808
+ESS_SoC[105]                             = 33.2808
+ESS_SoC[106]                             = 33.2808
+ESS_SoC[107]                             = 33.2808
+ESS_SoC[108]                             = 33.2808
+ESS_SoC[109]                             = 33.2808
+ESS_SoC[110]                             = 33.2808
+ESS_SoC[111]                             = 33.2808
+ESS_SoC[112]                             = 33.2808
+ESS_SoC[113]                             = 33.2808
+ESS_SoC[114]                             = 33.2808
+ESS_SoC[115]                             = 17.8759
+ESS_SoC[116]                             = 17.8759
+ESS_SoC[117]                             = 8.4805
+ESS_SoC[118]                             = 8.4805
+ESS_SoC[119]                             = 8.4805
+ESS_SoC[120]                             = 8.4805
+ESS_SoC[121]                             = 9.5684
+ESS_SoC[122]                             = 9.1542
+ESS_SoC[123]                             = 8.7400
+ESS_SoC[124]                             = 8.3257
+ESS_SoC[125]                             = 7.9115
+ESS_SoC[126]                             = 7.4973
+ESS_SoC[127]                             = 7.0831
+ESS_SoC[128]                             = 6.6688
+ESS_SoC[129]                             = 6.2546
+ESS_SoC[130]                             = 5.8404
+ESS_SoC[131]                             = 5.4262
+ESS_SoC[132]                             = 5.0120
+ESS_SoC[133]                             = 4.5977
+ESS_SoC[134]                             = 4.1835
+ESS_SoC[135]                             = 3.7693
+ESS_SoC[136]                             = 3.3551
+ESS_SoC[137]                             = 2.9408
+ESS_SoC[138]                             = 2.5266
+ESS_SoC[139]                             = 2.1124
+ESS_SoC[140]                             = 1.6982
+ESS_SoC[141]                             = 1.2839
+ESS_SoC[142]                             = 0.8697
+ESS_SoC[143]                             = 0.4555
 
 📏 CONSTRAINTIDE VÄÄRTUSED JA STAATUS
 
-sim_import_export_restrict[0]            : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[1]            : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[2]            : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[3]            : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[4]            : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[5]            : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[6]            : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[7]            : body=0.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[0]            : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[1]            : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[2]            : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[3]            : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[4]            : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[5]            : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[6]            : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[7]            : body=1.000, lower=None, upper=1.0 --> ✅ OK
 sim_import_export_restrict[8]            : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_import_export_restrict[9]            : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_import_export_restrict[10]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[11]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[12]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[13]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[14]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[15]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[11]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[12]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[13]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[14]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[15]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
 sim_import_export_restrict[16]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_import_export_restrict[17]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_import_export_restrict[18]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
@@ -1516,55 +1516,55 @@ sim_import_export_restrict[67]           : body=0.000, lower=None, upper=1.0 -->
 sim_import_export_restrict[68]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_import_export_restrict[69]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_import_export_restrict[70]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[71]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[72]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[73]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[74]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[75]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[76]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[77]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[78]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[79]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[80]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[81]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[82]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[83]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[84]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[85]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[86]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[87]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[88]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[89]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[90]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[91]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[92]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[93]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[94]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[95]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[96]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[97]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[98]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[99]           : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[100]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[101]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[102]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[103]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[104]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[105]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[106]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[107]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[108]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[109]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[110]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[111]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[112]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[113]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[114]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[115]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[116]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[117]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[118]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_import_export_restrict[119]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[71]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[72]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[73]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[74]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[75]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[76]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[77]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[78]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[79]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[80]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[81]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[82]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[83]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[84]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[85]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[86]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[87]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[88]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[89]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[90]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[91]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[92]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[93]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[94]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[95]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[96]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[97]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[98]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[99]           : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[100]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[101]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[102]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[103]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[104]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[105]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[106]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[107]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[108]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[109]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[110]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[111]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[112]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[113]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[114]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[115]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[116]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[117]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[118]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_import_export_restrict[119]          : body=1.000, lower=None, upper=1.0 --> ✅ OK
 sim_import_export_restrict[120]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_import_export_restrict[121]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_import_export_restrict[122]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
@@ -1589,22 +1589,22 @@ sim_import_export_restrict[140]          : body=0.000, lower=None, upper=1.0 -->
 sim_import_export_restrict[141]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_import_export_restrict[142]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_import_export_restrict[143]          : body=0.000, lower=None, upper=1.0 --> ✅ OK
-pcc_export[0]                            : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[1]                            : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[2]                            : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[3]                            : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[4]                            : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[5]                            : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[6]                            : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[7]                            : body=0.000, lower=None, upper=0.0 --> ✅ OK
+pcc_export[0]                            : body=-729.525, lower=None, upper=0.0 --> ✅ OK
+pcc_export[1]                            : body=-735.785, lower=None, upper=0.0 --> ✅ OK
+pcc_export[2]                            : body=-743.520, lower=None, upper=0.0 --> ✅ OK
+pcc_export[3]                            : body=-752.629, lower=None, upper=0.0 --> ✅ OK
+pcc_export[4]                            : body=-762.992, lower=None, upper=0.0 --> ✅ OK
+pcc_export[5]                            : body=-774.473, lower=None, upper=0.0 --> ✅ OK
+pcc_export[6]                            : body=-786.926, lower=None, upper=0.0 --> ✅ OK
+pcc_export[7]                            : body=-820.101, lower=None, upper=0.0 --> ✅ OK
 pcc_export[8]                            : body=0.000, lower=None, upper=0.0 --> ✅ OK
 pcc_export[9]                            : body=0.000, lower=None, upper=0.0 --> ✅ OK
 pcc_export[10]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[11]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[12]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[13]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[14]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[15]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
+pcc_export[11]                           : body=-929.250, lower=None, upper=0.0 --> ✅ OK
+pcc_export[12]                           : body=-936.970, lower=None, upper=0.0 --> ✅ OK
+pcc_export[13]                           : body=-944.550, lower=None, upper=0.0 --> ✅ OK
+pcc_export[14]                           : body=-952.490, lower=None, upper=0.0 --> ✅ OK
+pcc_export[15]                           : body=-966.883, lower=None, upper=0.0 --> ✅ OK
 pcc_export[16]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
 pcc_export[17]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
 pcc_export[18]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
@@ -1660,55 +1660,55 @@ pcc_export[67]                           : body=0.000, lower=None, upper=0.0 -->
 pcc_export[68]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
 pcc_export[69]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
 pcc_export[70]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[71]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[72]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[73]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[74]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[75]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[76]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[77]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[78]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[79]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[80]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[81]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[82]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[83]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[84]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[85]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[86]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[87]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[88]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[89]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[90]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[91]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[92]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[93]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[94]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[95]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[96]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[97]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[98]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[99]                           : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[100]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[101]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[102]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[103]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[104]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[105]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[106]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[107]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[108]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[109]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[110]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[111]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[112]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[113]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[114]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[115]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[116]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[117]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[118]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
-pcc_export[119]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
+pcc_export[71]                           : body=-966.057, lower=None, upper=0.0 --> ✅ OK
+pcc_export[72]                           : body=-957.046, lower=None, upper=0.0 --> ✅ OK
+pcc_export[73]                           : body=-947.345, lower=None, upper=0.0 --> ✅ OK
+pcc_export[74]                           : body=-937.020, lower=None, upper=0.0 --> ✅ OK
+pcc_export[75]                           : body=-914.827, lower=None, upper=0.0 --> ✅ OK
+pcc_export[76]                           : body=-902.490, lower=None, upper=0.0 --> ✅ OK
+pcc_export[77]                           : body=-889.859, lower=None, upper=0.0 --> ✅ OK
+pcc_export[78]                           : body=-877.056, lower=None, upper=0.0 --> ✅ OK
+pcc_export[79]                           : body=-788.406, lower=None, upper=0.0 --> ✅ OK
+pcc_export[80]                           : body=-769.466, lower=None, upper=0.0 --> ✅ OK
+pcc_export[81]                           : body=-751.129, lower=None, upper=0.0 --> ✅ OK
+pcc_export[82]                           : body=-733.528, lower=None, upper=0.0 --> ✅ OK
+pcc_export[83]                           : body=-610.077, lower=None, upper=0.0 --> ✅ OK
+pcc_export[84]                           : body=-588.575, lower=None, upper=0.0 --> ✅ OK
+pcc_export[85]                           : body=-568.698, lower=None, upper=0.0 --> ✅ OK
+pcc_export[86]                           : body=-550.702, lower=None, upper=0.0 --> ✅ OK
+pcc_export[87]                           : body=-214.498, lower=None, upper=0.0 --> ✅ OK
+pcc_export[88]                           : body=-192.209, lower=None, upper=0.0 --> ✅ OK
+pcc_export[89]                           : body=-173.897, lower=None, upper=0.0 --> ✅ OK
+pcc_export[90]                           : body=-159.780, lower=None, upper=0.0 --> ✅ OK
+pcc_export[91]                           : body=-56.749, lower=None, upper=0.0 --> ✅ OK
+pcc_export[92]                           : body=-56.771, lower=None, upper=0.0 --> ✅ OK
+pcc_export[93]                           : body=-56.785, lower=None, upper=0.0 --> ✅ OK
+pcc_export[94]                           : body=-56.799, lower=None, upper=0.0 --> ✅ OK
+pcc_export[95]                           : body=-56.800, lower=None, upper=0.0 --> ✅ OK
+pcc_export[96]                           : body=-56.793, lower=None, upper=0.0 --> ✅ OK
+pcc_export[97]                           : body=-56.769, lower=None, upper=0.0 --> ✅ OK
+pcc_export[98]                           : body=-56.747, lower=None, upper=0.0 --> ✅ OK
+pcc_export[99]                           : body=-56.719, lower=None, upper=0.0 --> ✅ OK
+pcc_export[100]                          : body=-56.684, lower=None, upper=0.0 --> ✅ OK
+pcc_export[101]                          : body=-56.642, lower=None, upper=0.0 --> ✅ OK
+pcc_export[102]                          : body=-56.595, lower=None, upper=0.0 --> ✅ OK
+pcc_export[103]                          : body=-56.540, lower=None, upper=0.0 --> ✅ OK
+pcc_export[104]                          : body=-56.480, lower=None, upper=0.0 --> ✅ OK
+pcc_export[105]                          : body=-56.413, lower=None, upper=0.0 --> ✅ OK
+pcc_export[106]                          : body=-56.342, lower=None, upper=0.0 --> ✅ OK
+pcc_export[107]                          : body=-56.278, lower=None, upper=0.0 --> ✅ OK
+pcc_export[108]                          : body=-56.257, lower=None, upper=0.0 --> ✅ OK
+pcc_export[109]                          : body=-56.216, lower=None, upper=0.0 --> ✅ OK
+pcc_export[110]                          : body=-56.706, lower=None, upper=0.0 --> ✅ OK
+pcc_export[111]                          : body=-186.673, lower=None, upper=0.0 --> ✅ OK
+pcc_export[112]                          : body=-294.080, lower=None, upper=0.0 --> ✅ OK
+pcc_export[113]                          : body=-397.688, lower=None, upper=0.0 --> ✅ OK
+pcc_export[114]                          : body=-321.827, lower=None, upper=0.0 --> ✅ OK
+pcc_export[115]                          : body=-756.697, lower=None, upper=0.0 --> ✅ OK
+pcc_export[116]                          : body=-705.509, lower=None, upper=0.0 --> ✅ OK
+pcc_export[117]                          : body=-863.248, lower=None, upper=0.0 --> ✅ OK
+pcc_export[118]                          : body=-909.706, lower=None, upper=0.0 --> ✅ OK
+pcc_export[119]                          : body=-944.685, lower=None, upper=0.0 --> ✅ OK
 pcc_export[120]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
 pcc_export[121]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
 pcc_export[122]                          : body=0.000, lower=None, upper=0.0 --> ✅ OK
@@ -1885,69 +1885,69 @@ sim_charge_discharge_restrict[4]         : body=0.000, lower=None, upper=1.0 -->
 sim_charge_discharge_restrict[5]         : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_charge_discharge_restrict[6]         : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_charge_discharge_restrict[7]         : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[8]         : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[9]         : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[10]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[8]         : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[9]         : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[10]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
 sim_charge_discharge_restrict[11]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_charge_discharge_restrict[12]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_charge_discharge_restrict[13]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_charge_discharge_restrict[14]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_charge_discharge_restrict[15]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[16]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[17]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[18]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[19]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[20]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[21]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[22]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[23]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[24]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[25]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[26]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[27]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[28]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[29]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[30]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[31]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[32]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[33]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[34]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[35]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[36]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[37]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[38]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[39]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[40]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[41]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[42]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[43]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[44]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[45]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[46]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[47]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[48]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[49]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[50]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[51]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[52]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[53]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[54]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[55]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[56]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[57]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[58]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[59]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[60]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[61]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[62]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[63]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[64]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[65]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[66]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[67]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[68]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[69]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[70]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[16]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[17]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[18]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[19]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[20]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[21]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[22]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[23]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[24]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[25]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[26]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[27]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[28]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[29]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[30]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[31]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[32]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[33]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[34]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[35]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[36]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[37]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[38]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[39]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[40]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[41]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[42]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[43]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[44]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[45]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[46]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[47]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[48]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[49]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[50]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[51]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[52]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[53]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[54]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[55]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[56]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[57]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[58]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[59]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[60]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[61]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[62]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[63]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[64]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[65]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[66]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[67]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[68]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[69]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[70]        : body=1.000, lower=None, upper=1.0 --> ✅ OK
 sim_charge_discharge_restrict[71]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_charge_discharge_restrict[72]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_charge_discharge_restrict[73]        : body=0.000, lower=None, upper=1.0 --> ✅ OK
@@ -1991,36 +1991,36 @@ sim_charge_discharge_restrict[110]       : body=0.000, lower=None, upper=1.0 -->
 sim_charge_discharge_restrict[111]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_charge_discharge_restrict[112]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_charge_discharge_restrict[113]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[114]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[114]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
 sim_charge_discharge_restrict[115]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[116]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[116]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
 sim_charge_discharge_restrict[117]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_charge_discharge_restrict[118]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
 sim_charge_discharge_restrict[119]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[120]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[121]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[122]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[123]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[124]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[125]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[126]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[127]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[128]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[129]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[130]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[131]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[132]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[133]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[134]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[135]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[136]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[137]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[138]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[139]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[140]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[141]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[142]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
-sim_charge_discharge_restrict[143]       : body=0.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[120]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[121]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[122]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[123]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[124]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[125]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[126]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[127]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[128]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[129]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[130]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[131]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[132]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[133]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[134]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[135]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[136]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[137]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[138]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[139]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[140]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[141]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[142]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
+sim_charge_discharge_restrict[143]       : body=1.000, lower=None, upper=1.0 --> ✅ OK
 ESS_kW_charging[0]                       : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[1]                       : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[2]                       : body=0.000, lower=None, upper=0.0 --> ✅ OK
@@ -2029,20 +2029,20 @@ ESS_kW_charging[4]                       : body=0.000, lower=None, upper=0.0 -->
 ESS_kW_charging[5]                       : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[6]                       : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[7]                       : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_charging[8]                       : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_charging[9]                       : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_charging[10]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_charging[8]                       : body=-7.724, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_charging[9]                       : body=-20.768, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_charging[10]                      : body=-34.075, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[11]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[12]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[13]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[14]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[15]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_charging[16]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_charging[17]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_charging[18]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_charging[19]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_charging[20]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_charging[21]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_charging[16]                      : body=-147.582, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_charging[17]                      : body=-152.937, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_charging[18]                      : body=-157.909, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_charging[19]                      : body=-167.395, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_charging[20]                      : body=-170.343, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_charging[21]                      : body=-172.974, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[22]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[23]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[24]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
@@ -2088,10 +2088,10 @@ ESS_kW_charging[63]                      : body=0.000, lower=None, upper=0.0 -->
 ESS_kW_charging[64]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[65]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[66]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_charging[67]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_charging[68]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_charging[69]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_charging[70]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_charging[67]                      : body=-172.976, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_charging[68]                      : body=-168.963, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_charging[69]                      : body=-164.388, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_charging[70]                      : body=-159.239, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[71]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[72]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[73]                      : body=0.000, lower=None, upper=0.0 --> ✅ OK
@@ -2141,7 +2141,7 @@ ESS_kW_charging[116]                     : body=0.000, lower=None, upper=0.0 -->
 ESS_kW_charging[117]                     : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[118]                     : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[119]                     : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_charging[120]                     : body=0.000, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_charging[120]                     : body=-162.642, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[121]                     : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[122]                     : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_charging[123]                     : body=0.000, lower=None, upper=0.0 --> ✅ OK
@@ -2187,51 +2187,51 @@ ESS_kW_discharging[18]                   : body=0.000, lower=None, upper=0.0 -->
 ESS_kW_discharging[19]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_discharging[20]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_discharging[21]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[22]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[23]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[24]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[25]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[26]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[27]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[28]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[29]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[30]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[31]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[32]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[33]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[34]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[35]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[36]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[37]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[38]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[39]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[40]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[41]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[42]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[43]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[44]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[45]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[46]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[47]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[48]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[49]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[50]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[51]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[52]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[53]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[54]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[55]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[56]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[57]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[58]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[59]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[60]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[61]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[62]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[63]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[64]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[65]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[66]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[22]                   : body=-174.709, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[23]                   : body=-173.738, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[24]                   : body=-171.249, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[25]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[26]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[27]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[28]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[29]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[30]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[31]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[32]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[33]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[34]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[35]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[36]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[37]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[38]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[39]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[40]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[41]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[42]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[43]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[44]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[45]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[46]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[47]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[48]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[49]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[50]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[51]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[52]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[53]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[54]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[55]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[56]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[57]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[58]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[59]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[60]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[61]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[62]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[63]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[64]                   : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[65]                   : body=-170.509, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[66]                   : body=-172.895, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_discharging[67]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_discharging[68]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_discharging[69]                   : body=0.000, lower=None, upper=0.0 --> ✅ OK
@@ -2281,34 +2281,34 @@ ESS_kW_discharging[112]                  : body=0.000, lower=None, upper=0.0 -->
 ESS_kW_discharging[113]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_discharging[114]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_discharging[115]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[116]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[116]                  : body=-68.269, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_discharging[117]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_discharging[118]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_discharging[119]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_discharging[120]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[121]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[122]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[123]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[124]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[125]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[126]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[127]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[128]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[129]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[130]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[131]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[132]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[133]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[134]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[135]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[136]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[137]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[138]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[139]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[140]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[141]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[142]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
-ESS_kW_discharging[143]                  : body=0.000, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[121]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[122]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[123]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[124]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[125]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[126]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[127]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[128]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[129]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[130]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[131]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[132]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[133]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[134]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[135]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[136]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[137]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[138]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[139]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[140]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[141]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[142]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
+ESS_kW_discharging[143]                  : body=-170.294, lower=None, upper=0.0 --> ✅ OK
 ESS_kW_calculation[0]                    : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ESS_kW_calculation[1]                    : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ESS_kW_calculation[2]                    : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
@@ -2448,12 +2448,12 @@ ESS_kW_calculation[135]                  : body=0.000, lower=0.0, upper=0.0 --> 
 ESS_kW_calculation[136]                  : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ESS_kW_calculation[137]                  : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ESS_kW_calculation[138]                  : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ESS_kW_calculation[139]                  : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+ESS_kW_calculation[139]                  : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ESS_kW_calculation[140]                  : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ESS_kW_calculation[141]                  : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ESS_kW_calculation[142]                  : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ESS_kW_calculation[143]                  : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[0]                         : body=0.253, lower=0.25324000597725205, upper=0.25324000597725205 --> ✅ OK
+ess_SoC_const[0]                         : body=0.041, lower=0.041272726407086985, upper=0.041272726407086985 --> ✅ OK
 ess_SoC_const[1]                         : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[2]                         : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[3]                         : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
@@ -2462,9 +2462,9 @@ ess_SoC_const[5]                         : body=0.000, lower=0.0, upper=0.0 --> 
 ess_SoC_const[6]                         : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[7]                         : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[8]                         : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[9]                         : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[9]                         : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[10]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[11]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[11]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[12]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[13]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[14]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
@@ -2472,58 +2472,58 @@ ess_SoC_const[15]                        : body=0.000, lower=0.0, upper=0.0 --> 
 ess_SoC_const[16]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[17]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[18]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[19]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[19]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[20]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[21]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[22]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[21]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[22]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[23]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[24]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[24]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[25]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[26]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[27]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[27]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[28]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[29]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[30]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[31]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[31]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[32]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[33]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[34]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[35]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[35]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[36]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[37]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[38]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[39]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[39]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[40]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[41]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[42]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[43]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[44]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[44]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[45]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[46]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[47]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[48]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[48]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[49]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[50]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[51]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[52]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[52]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[53]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[54]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[55]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[56]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[56]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[57]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[58]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[59]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[60]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[60]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[61]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[62]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[63]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[64]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[65]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[66]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[65]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[66]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[67]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[68]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[68]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[69]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[70]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[70]                        : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[71]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[72]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[73]                        : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
@@ -2568,33 +2568,177 @@ ess_SoC_const[111]                       : body=0.000, lower=0.0, upper=0.0 --> 
 ess_SoC_const[112]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[113]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[114]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[115]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[115]                       : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[116]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[117]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[117]                       : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[118]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[119]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[120]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[121]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[121]                       : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[122]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[123]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[123]                       : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[124]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[125]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[125]                       : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[126]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[127]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[128]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[128]                       : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[129]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[130]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[130]                       : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[131]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[132]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[133]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[133]                       : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[134]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[135]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[136]                       : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[135]                       : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[136]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[137]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[138]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[139]                       : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[140]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[138]                       : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[139]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[140]                       : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
 ess_SoC_const[141]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[142]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
-ess_SoC_const[143]                       : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
-soc_end_target                           : body=0.253, lower=0.25324000597725205, upper=0.25324000597725205 --> ✅ OK
+ess_SoC_const[142]                       : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+ess_SoC_const[143]                       : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+soc_end_target                           : body=0.041, lower=0.041272726407086985, upper=0.041272726407086985 --> ✅ OK
+pcc_self_consumption[0]                  : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[1]                  : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[2]                  : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[3]                  : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[4]                  : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[5]                  : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[6]                  : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[7]                  : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[8]                  : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[9]                  : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[10]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[11]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[12]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[13]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[14]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[15]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[16]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[17]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[18]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[19]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[20]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[21]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[22]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[23]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[24]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[25]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[26]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[27]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[28]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[29]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[30]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[31]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[32]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[33]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[34]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[35]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[36]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[37]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[38]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[39]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[40]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[41]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[42]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[43]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[44]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[45]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[46]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[47]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[48]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[49]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[50]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[51]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[52]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[53]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[54]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[55]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[56]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[57]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[58]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[59]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[60]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[61]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[62]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[63]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[64]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[65]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[66]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[67]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[68]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[69]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[70]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[71]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[72]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[73]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[74]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[75]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[76]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[77]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[78]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[79]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[80]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[81]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[82]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[83]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[84]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[85]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[86]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[87]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[88]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[89]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[90]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[91]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[92]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[93]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[94]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[95]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[96]                 : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[97]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[98]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[99]                 : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[100]                : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[101]                : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[102]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[103]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[104]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[105]                : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[106]                : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[107]                : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[108]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[109]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[110]                : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[111]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[112]                : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[113]                : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[114]                : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[115]                : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[116]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[117]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[118]                : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[119]                : body=-0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[120]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[121]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[122]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[123]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[124]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[125]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[126]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[127]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[128]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[129]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[130]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[131]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[132]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[133]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[134]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[135]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[136]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[137]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[138]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[139]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[140]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[141]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[142]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
+pcc_self_consumption[143]                : body=0.000, lower=0.0, upper=0.0 --> ✅ OK
