@@ -1,4 +1,11 @@
-
+# a4.yaml
+---
+# refers to directory under <repo>/python-modules/<python-module>
+appModule: a4
+type: python
+# has to be lowercase
+containerName: a4
+# 6-field cron expression
 cron: "10 */15 * * * *"                           # Execution every 15 minutes at 10'th second 
 logLevel: 4                                       # Logging level
 params:

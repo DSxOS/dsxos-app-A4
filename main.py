@@ -19,7 +19,7 @@ from logger import setup_logger
 
 # create parser
 parser = argparse.ArgumentParser(description="Run A4 with config file")
-parser.add_argument("-c", "--config", required=True, help="Path to config YAML file")
+parser.add_argument("-c", "--config", required=False, help="Path to config YAML file", default="/app/config.yaml")
 args = parser.parse_args()              # Read arguments
 with open(args.config, "r") as f:       # Open and read config-file
     raw_data = yaml.safe_load(f)
@@ -29,17 +29,19 @@ api_url = raw_data["params"]["apiEndpoint"]
 api_token = raw_data["params"]["token"]
 api_headers = {"Authorization": api_token}
 
+app_name = raw_data["appModule"]
+
 # Initialize query_utils with URL + headers    
 query_utils.init(api_url, api_headers)
 
 logger = setup_logger(
     log_file="query.log",
     loki_url="http://localhost:3100/loki/api/v1/push",  # Loki address
-    loki_tags={"app_name": "A4Runner"},        # add more tags if needed
+    loki_tags={"app_name": app_name},        # add more tags if needed
     level="INFO"
 )
 
-logger.info("A4Runner start")
+logger.info(f"{app_name} start.")
 
 start_time = datetime.now(timezone.utc)
 
@@ -295,4 +297,4 @@ if (results.solver.status == SolverStatus.ok) and (
 else: 
     logger.error(f"Solver failed - empty result")
 
-logger.info("A4Runner finished")
+logger.info(f"{app_name} finished.")
