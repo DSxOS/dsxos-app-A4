@@ -6,5 +6,4 @@ pathlib
 datetime
 pyyaml
 requests
-glpk-utils
 glpk
