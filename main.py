@@ -27,12 +27,17 @@ with open(args.config, "r") as f:       # Open and read config-file
 # Extract API URL and Token
 api_url = raw_data["params"]["apiEndpoint"]
 api_token = raw_data["params"]["token"]
-api_headers = {"Authorization": api_token}
+client_id = raw_data["params"]["clientId"]
+
+#api_headers = {"Authorization": "Bearer " + token}
+api_headers = {}
 
 app_name = raw_data["appModule"]
 
-# Initialize query_utils with URL + headers    
+# Initialize query_utils with URL + headers
 query_utils.init(api_url, api_headers)
+jwt_token = query_utils.get_token(client_id, api_token)
+query_utils.add_header("Authorization", f"Bearer {jwt_token}")
 
 logger = setup_logger(
     log_file="query.log",
