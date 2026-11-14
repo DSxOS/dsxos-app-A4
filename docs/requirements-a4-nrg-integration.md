@@ -97,4 +97,16 @@ Price-based objectives (that is A5); credentials from the site secrets store; th
 
 ## 6. Amendments
 
-None yet.
+- **A4-A1 (2026-11-14, owner decision "penalise losses", A4 only).** Finding from the first live run on NRG
+  (13:45Z): with no PV surplus anywhere in the horizon, the plan discharged 118.7 kWh to 15 % SoC and recharged
+  131.6 kWh from the grid (about 13 kWh lost) although idling was optimal. Cause: `essDegradationWeight` 1e-6 times
+  Δt (1/60 h) is below the solver tolerance, so cycling was free.
+  - R4 gains a loss term: Σ_k Δt · `essLossWeight` · ( `ch·(1 − η_ch)` + `dis·(1/η_dis − 1)` ), the conversion
+    losses in kWh. New optional parameter `essLossWeight` [2.0], must be ≥ 0. At 1.0, burning surplus by cycling
+    would tie with exporting it; 2.0 prefers export wherever the export limit allows, while storing surplus for later
+    use (about 0.1 kWh lost per kWh, 0.2 cost) still beats exporting (1.0). Within an export limit, burning is still
+    chosen over a limit overrun.
+  - The result reports the loss energy (`loss_kwh`) and the run log shows it.
+  - AC1 gains (g): with no PV surplus and end target = start, the plan is idle (every step 0, losses 0); and (h): with
+    a full battery and η 0.95, surplus that may be exported is exported, not burned (replaces the η = 1.0 workaround
+    in the full-battery test).

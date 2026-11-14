@@ -24,4 +24,5 @@ params:
   min_period: 21600                                 # minimum forecast horizon [s]
   # essChargeEfficiency: 0.95
   # essDischargeEfficiency: 0.95
+  # essLossWeight: 2.0
   # essDegradationWeight: 0.000001

@@ -36,12 +36,28 @@ def test_efficiency_is_applied_when_storing():
     assert stored == pytest.approx(60.0 * 0.95, abs=1e-4)
 
 
-def test_full_battery_means_export():
-    # Battery already at Emax and no load: the 20 kWh of PV can only be exported. Efficiency 1.0 here, because with
-    # losses the model could "burn" a little surplus by cycling (a known, accepted effect on NRG).
-    r = solve(inputs(e0_kwh=80.0, e_end_kwh=80.0, load_kw=[0.0] * 8, pv_kw=[0, 0, -20, 0, 0, 0, 0, 0],
-                     eta_charge=1.0, eta_discharge=1.0))
+def test_full_battery_means_export_not_burning():
+    # A4-A1 (h): battery at Emax, no load, export allowed: the 20 kWh of PV is exported, not burned by cycling.
+    r = solve(inputs(e0_kwh=80.0, e_end_kwh=80.0, load_kw=[0.0] * 8, pv_kw=[0, 0, -20, 0, 0, 0, 0, 0]))
     assert r.export_kwh == pytest.approx(20.0, abs=1e-4)
+    assert r.loss_kwh == pytest.approx(0.0, abs=1e-6)
+
+
+def test_no_surplus_means_idle():
+    # A4-A1 (g), the NRG case of 2026-11-14 at 60 s steps: PV never exceeds the load, so nothing can be gained and the
+    # plan must be idle (it used to discharge to Emin and recharge from the grid).
+    n = 240
+    r = solve(inputs(interval_s=60, load_kw=[60.0] * n, pv_kw=[-10.0] * n, p_max_kw=200.0, capacity_kwh=438.0,
+                     e0_kwh=191.9, e_end_kwh=191.9, import_limit_kw=170.0, export_limit_kw=0.0,
+                     end_penalty_per_kwh=10.0))
+    assert all(abs(p) < 1e-6 for p in r.ess_kw)
+    assert r.loss_kwh == pytest.approx(0.0, abs=1e-6)
+
+
+def test_pv_surplus_is_still_stored_with_losses_counted():
+    r = solve(inputs())
+    assert r.export_kwh == pytest.approx(0.0, abs=1e-6)
+    assert r.loss_kwh > 0
 
 
 def test_soft_pcc_limit_reports_overrun():

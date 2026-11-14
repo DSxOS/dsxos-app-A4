@@ -1,7 +1,7 @@
 """A4 optimisation model (A4-IMP R2-R4): ESS schedule that maximises PV self-consumption (minimises PCC export).
 
 Units: power kW, energy kWh. Positive ESS power = charging. PCC = load + pv + ESS (pv negative = generation).
-The objective is in kWh-weighted units (no price): export + tiny charge term + penalties.
+The objective is in kWh-weighted units (no price): export + weighted conversion losses + tiny charge term + penalties.
 """
 from dataclasses import dataclass, field
 from typing import List, Optional
@@ -25,9 +25,10 @@ class PlanInputs:
     export_limit_kw: float              # soft, positive number
     eta_charge: float = 0.95
     eta_discharge: float = 0.95
-    degradation_weight: float = 1e-6    # per kWh charged (tie-breaker against needless cycling)
+    degradation_weight: float = 1e-6    # per kWh charged
     pcc_penalty_per_kwh: float = 1000.0
     end_penalty_per_kwh: float = 10.0
+    loss_weight: float = 2.0            # per kWh of conversion losses (A4-A1: stops needless cycling)
 
 
 @dataclass
@@ -37,6 +38,7 @@ class PlanResult:
     ess_kw: List[float] = field(default_factory=list)
     energy_kwh: List[float] = field(default_factory=list)
     export_kwh: float = 0.0
+    loss_kwh: float = 0.0
     import_overrun_kwh: float = 0.0
     export_overrun_kwh: float = 0.0
     end_deviation_kwh: float = 0.0
@@ -50,6 +52,11 @@ def energy_bounds(inp: PlanInputs):
     return min(e_min, inp.e0_kwh), max(e_max, inp.e0_kwh)
 
 
+def loss_kw(m, t):
+    """Conversion losses in step t, kW: (1 - eta_ch) of the charge power and (1/eta_dis - 1) of the discharge power."""
+    return m.ch[t] * (1 - m.eta_charge) + m.dis[t] * (1 / m.eta_discharge - 1)
+
+
 def build_model(inp: PlanInputs) -> pyo.ConcreteModel:
     n = len(inp.load_kw)
     if n == 0 or len(inp.pv_kw) != n:
@@ -61,6 +68,8 @@ def build_model(inp: PlanInputs) -> pyo.ConcreteModel:
 
     m = pyo.ConcreteModel(name="A4")
     m.dt_h = dt_h
+    m.eta_charge = inp.eta_charge
+    m.eta_discharge = inp.eta_discharge
     m.T = pyo.RangeSet(0, n - 1)
     m.K = pyo.RangeSet(0, n)
 
@@ -93,6 +102,7 @@ def build_model(inp: PlanInputs) -> pyo.ConcreteModel:
 
     def objective(m):
         steps = sum(dt_h * (m.exp[t] + m.ch[t] * inp.degradation_weight
+                            + loss_kw(m, t) * inp.loss_weight
                             + (m.o_imp[t] + m.o_exp[t]) * inp.pcc_penalty_per_kwh) for t in m.T)
         return steps + (m.dev_up + m.dev_down) * inp.end_penalty_per_kwh
     m.cost = pyo.Objective(rule=objective, sense=pyo.minimize)
@@ -117,6 +127,7 @@ def solve(m: pyo.ConcreteModel, time_limit_s: float = 300, solver_name: str = "g
         ess_kw=[pyo.value(m.ch[t]) - pyo.value(m.dis[t]) + 0.0 for t in m.T],
         energy_kwh=[pyo.value(m.E[k]) for k in m.K],
         export_kwh=sum(pyo.value(m.exp[t]) for t in m.T) * m.dt_h,
+        loss_kwh=sum(pyo.value(loss_kw(m, t)) for t in m.T) * m.dt_h,
         import_overrun_kwh=sum(pyo.value(m.o_imp[t]) for t in m.T) * m.dt_h,
         export_overrun_kwh=sum(pyo.value(m.o_exp[t]) for t in m.T) * m.dt_h,
         end_deviation_kwh=pyo.value(m.dev_up) - pyo.value(m.dev_down),
