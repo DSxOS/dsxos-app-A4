@@ -1,0 +1,4 @@
+__pycache__/
+.pytest_cache/
+debug_output.txt
+query.log
