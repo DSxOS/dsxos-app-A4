@@ -26,3 +26,4 @@ params:
   # essDischargeEfficiency: 0.95
   # essLossWeight: 2.0
   # essDegradationWeight: 0.000001
+  # essRampWeight: 0.001                            # anti-flicker: per kW of ESS power change between steps

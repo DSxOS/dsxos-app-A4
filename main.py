@@ -1,7 +1,7 @@
 """A4 self-consumption maximisation: plans the ESS power so that as little PV energy as possible is exported.
 
 Run by the platform's python-app scheduler with the site's config (default /app/config.yaml).
-Requirements: docs/requirements-a4-nrg-integration.md (A4-IMP).
+Requirements: docs/requirements-a4-nrg-integration.md (A4-IMP), docs/requirements-a4-anti-flicker.md (A4-AF).
 Exit codes: 0 = plan (or fallback plan) posted, 1 = configuration/input error or no plan possible.
 """
 import argparse
@@ -24,6 +24,7 @@ DEFAULTS = {
     "essDischargeEfficiency": 0.95,
     "essDegradationWeight": 1e-6,
     "essLossWeight": 2.0,
+    "essRampWeight": 0.001,
     "pccLimitPenaltyPerKWh": 1000.0,
     "endEnergyPenaltyPerKWh": 10.0,
     "solverTimeLimitS": 300,
@@ -78,6 +79,7 @@ def load_params(raw):
         (0 < float(params["essDischargeEfficiency"]) <= 1, "essDischargeEfficiency must be in (0, 1]"),
         (float(params["essDegradationWeight"]) >= 0, "essDegradationWeight must be >= 0"),
         (float(params["essLossWeight"]) >= 0, "essLossWeight must be >= 0"),
+        (float(params["essRampWeight"]) >= 0, "essRampWeight must be >= 0"),
         (float(params["pccLimitPenaltyPerKWh"]) >= 0, "pccLimitPenaltyPerKWh must be >= 0"),
         (float(params["endEnergyPenaltyPerKWh"]) >= 0, "endEnergyPenaltyPerKWh must be >= 0"),
         (float(params["solverTimeLimitS"]) > 0, "solverTimeLimitS must be > 0"),
@@ -236,6 +238,7 @@ def run(config_path, now=None):
         eta_charge=float(params["essChargeEfficiency"]), eta_discharge=float(params["essDischargeEfficiency"]),
         degradation_weight=float(params["essDegradationWeight"]),
         loss_weight=float(params["essLossWeight"]),
+        ramp_weight=float(params["essRampWeight"]),
         pcc_penalty_per_kwh=float(params["pccLimitPenaltyPerKWh"]),
         end_penalty_per_kwh=float(params["endEnergyPenaltyPerKWh"]),
     )
@@ -247,7 +250,7 @@ def run(config_path, now=None):
         return run_fallback(params, start, result_dp_id, f"solver result {result.status}")
 
     logger.info(f"solved ({result.status}): {len(times)} steps {iso(times[0])} .. {iso(times[-1])}, "
-                f"export {result.export_kwh:.2f} kWh, losses {result.loss_kwh:.2f} kWh, end energy {result.energy_kwh[-1]:.1f} kWh")
+                f"export {result.export_kwh:.2f} kWh, losses {result.loss_kwh:.2f} kWh, ramp term {result.ramp_objective:.4f}, end energy {result.energy_kwh[-1]:.1f} kWh")
     if result.import_overrun_kwh > 1e-6 or result.export_overrun_kwh > 1e-6:
         logger.warning(f"plan exceeds the PCC limits: import {result.import_overrun_kwh:.2f} kWh, "
                        f"export {result.export_overrun_kwh:.2f} kWh over the horizon")

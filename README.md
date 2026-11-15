@@ -17,7 +17,9 @@ Per time step (`interval`):
 - **End:** the end energy should equal the start, or the value of `essEffectiveEndCharge` if set (soft).
 - **Minimised (kWh):** export + `essLossWeight` · conversion losses (`ch·(1−η_ch) + dis·(1/η_dis−1)`) +
   `essDegradationWeight` · charged energy + penalties. The loss term keeps the battery idle when nothing can be
-  gained and prefers exporting to burning surplus where export is allowed (amendment A4-A1).
+  gained and prefers exporting to burning surplus where export is allowed (amendment A4-A1). A small
+  `essRampWeight` · Σ |ESS power change between steps| breaks ties between equal-cost timings, so the plan is flat
+  instead of flickering on/off (A4-AF).
 
 The time grid starts at the run time rounded down to `interval`. With too little forecast, or no usable solver
 result, A4 re-posts the remaining part of its previous plan (fallback). Exit 0 = plan or fallback posted; 1 = error.
@@ -42,6 +44,7 @@ See [example_config.yaml](example_config.yaml).
 | `essChargeEfficiency`, `essDischargeEfficiency` | | 0.95 | Efficiencies |
 | `essLossWeight` | | 2.0 | Weight per kWh of conversion losses |
 | `essDegradationWeight` | | 1e-6 | Weight per kWh charged |
+| `essRampWeight` | | 0.001 | Weight per kW of ESS power change between consecutive steps (not scaled by `interval`); 0 = off |
 | `pccLimitPenaltyPerKWh`, `endEnergyPenaltyPerKWh` | | 1000, 10 | Penalties per kWh |
 | `solverTimeLimitS`, `maxInputAgeS` | s | 300, 900 | GLPK limit; max age of the stored-energy reading |
 | `lokiUrl`, `writeDebugFile` | | Loki on localhost, `on-failure` | Logging; debug file `on-failure`/`always`/`never` |

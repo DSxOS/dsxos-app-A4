@@ -69,3 +69,38 @@ def test_end_energy_option_is_honoured():
     r = solve(inputs(load_kw=[0.0] * 8, pv_kw=[0.0] * 8, e0_kwh=30.0, e_end_kwh=60.0, end_penalty_per_kwh=10.0))
     assert r.energy_kwh[-1] == pytest.approx(60.0, abs=1e-4)
     assert sum(max(p, 0) for p in r.ess_kw) == pytest.approx(30.0 / 0.95, abs=1e-4)
+
+
+# --- A4-AF anti-flicker (AC1 a, b) ---------------------------------------------------------------------------------
+
+def flicker_inputs(ramp):
+    """60 s steps, no PV surplus, end target above the start: charging has equal cost in every step (F2)."""
+    import math
+    n = 90
+    load = [90.0 + 3.0 * math.sin(1.7 * i) for i in range(n)]
+    return inputs(interval_s=60, load_kw=load, pv_kw=[0.0] * n, p_max_kw=200.0, capacity_kwh=100.0,
+                  e0_kwh=50.0, e_end_kwh=69.0, import_limit_kw=170.0, export_limit_kw=0.0,
+                  end_penalty_per_kwh=10.0, ramp_weight=ramp)
+
+
+def jumps(r, threshold_kw=1.0):
+    return sum(1 for a, b in zip(r.ess_kw, r.ess_kw[1:]) if abs(b - a) > threshold_kw)
+
+
+def test_fixture_reproduces_the_flicker_without_ramp_weight():
+    r = solve(flicker_inputs(0.0))
+    assert abs(r.energy_kwh[-1] - 69.0) < 1e-3
+    assert jumps(r) > 2, r.ess_kw
+
+
+def test_ramp_weight_gives_a_flat_plan():
+    r = solve(flicker_inputs(0.001))
+    assert abs(r.energy_kwh[-1] - 69.0) < 1e-3
+    assert jumps(r) <= 2, r.ess_kw
+
+
+def test_ramp_weight_has_small_impact():
+    off = solve(flicker_inputs(0.0))
+    on = solve(flicker_inputs(0.001))
+    assert off.ramp_objective == 0
+    assert (on.objective - on.ramp_objective) - off.objective <= 0.01
