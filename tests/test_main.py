@@ -157,3 +157,19 @@ def test_no_fallback_available_exits_1(cfg, monkeypatch, caplog):
     srv.install(monkeypatch)
     assert main.run(cfg(), now=NOW) == 1
     assert srv.posted == [] and "no previous plan" in caplog.text
+
+
+def test_negative_ramp_weight_is_a_configuration_error(cfg, monkeypatch, caplog):
+    FakeServer().install(monkeypatch)
+    assert main.run(cfg(essRampWeight=-0.1), now=NOW) == 1
+    assert "essRampWeight" in caplog.text
+
+
+def test_ramp_weight_defaults_to_0_001(cfg, monkeypatch):
+    srv = FakeServer()
+    srv.install(monkeypatch)
+    seen = []
+    real_build = a4model.build_model
+    monkeypatch.setattr(main.a4model, "build_model", lambda inp: seen.append(inp.ramp_weight) or real_build(inp))
+    assert main.run(cfg(), now=NOW) == 0
+    assert seen == [0.001]

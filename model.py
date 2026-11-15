@@ -29,6 +29,7 @@ class PlanInputs:
     pcc_penalty_per_kwh: float = 1000.0
     end_penalty_per_kwh: float = 10.0
     loss_weight: float = 2.0            # per kWh of conversion losses (A4-A1: stops needless cycling)
+    ramp_weight: float = 0.001          # per kW of ESS power change between steps (A4-AF: stops flicker)
 
 
 @dataclass
@@ -43,6 +44,7 @@ class PlanResult:
     export_overrun_kwh: float = 0.0
     end_deviation_kwh: float = 0.0
     objective: Optional[float] = None
+    ramp_objective: float = 0.0
 
 
 def energy_bounds(inp: PlanInputs):
@@ -100,11 +102,21 @@ def build_model(inp: PlanInputs) -> pyo.ConcreteModel:
     m.dev_down = pyo.Var(domain=pyo.NonNegativeReals)
     m.end_target = pyo.Constraint(expr=m.E[n] - e_end == m.dev_up - m.dev_down)
 
+    # Ramp of the ESS power between consecutive steps (A4-AF R1): breaks ties between equal-cost timings
+    m.TR = pyo.Set(initialize=list(range(1, n)))
+    m.ramp = pyo.Var(m.TR, domain=pyo.NonNegativeReals)
+    m.ramp_up = pyo.Constraint(m.TR, rule=lambda m, t:
+                               m.ramp[t] >= (m.ch[t] - m.dis[t]) - (m.ch[t - 1] - m.dis[t - 1]))
+    m.ramp_down = pyo.Constraint(m.TR, rule=lambda m, t:
+                                 m.ramp[t] >= (m.ch[t - 1] - m.dis[t - 1]) - (m.ch[t] - m.dis[t]))
+    m.ramp_term = pyo.Expression(expr=sum(m.ramp[t] for t in m.TR) * inp.ramp_weight)
+
     def objective(m):
         steps = sum(dt_h * (m.exp[t] + m.ch[t] * inp.degradation_weight
                             + loss_kw(m, t) * inp.loss_weight
                             + (m.o_imp[t] + m.o_exp[t]) * inp.pcc_penalty_per_kwh) for t in m.T)
-        return steps + (m.dev_up + m.dev_down) * inp.end_penalty_per_kwh
+        # A4-AF R2: ramp term per kW of change, not scaled by dt
+        return steps + (m.dev_up + m.dev_down) * inp.end_penalty_per_kwh + m.ramp_term
     m.cost = pyo.Objective(rule=objective, sense=pyo.minimize)
     return m
 
@@ -132,4 +144,5 @@ def solve(m: pyo.ConcreteModel, time_limit_s: float = 300, solver_name: str = "g
         export_overrun_kwh=sum(pyo.value(m.o_exp[t]) for t in m.T) * m.dt_h,
         end_deviation_kwh=pyo.value(m.dev_up) - pyo.value(m.dev_down),
         objective=pyo.value(m.cost),
+        ramp_objective=pyo.value(m.ramp_term),
     )
