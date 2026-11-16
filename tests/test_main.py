@@ -52,8 +52,8 @@ def cfg(tmp_path, monkeypatch):
     params = {
         "apiEndpoint": "http://x/api", "clientId": "c", "token": "s", "lokiUrl": "",
         "consumptionPrognosisIdentifier": "cons", "productionPrognosisIdentifier": "prod",
-        "ess_max_P_dp_id": "pmax", "ess_max_E_dp_id": "cap", "essEffectiveCharge": "charge",
-        "npPriceIdentifier": "unused", "essMinSafeLim": "unused",
+        "ess_max_P_charge_dp_id": "pmax", "ess_max_P_discharge_dp_id": "pmax", "ess_max_E_dp_id": "cap",
+        "essEffectiveCharge": "charge",
         "ess_min_soc": 15, "ess_max_soc": 80, "pccImportLimitW": 170000, "pccExportLimitW": 0,
         "essResultPowerPlanIdentifier": "ess_p_a4_test", "interval": 900, "min_period": 21600,
         "solverTimeLimitS": 60,
@@ -81,9 +81,20 @@ def test_plan_is_posted_on_an_aligned_grid(cfg, monkeypatch):
 def test_static_limits_are_used_when_no_datapoints(cfg, monkeypatch, caplog):
     srv = FakeServer()
     srv.install(monkeypatch)
-    path = cfg(drop=("ess_max_P_dp_id", "ess_max_E_dp_id"), essPowerLimitW=50000, essMaxCharge=200000)
+    path = cfg(ess_max_P_charge_dp_id=50000, ess_max_P_discharge_dp_id=30000, ess_max_E_dp_id=200000)
     assert main.run(path, now=NOW) == 0
-    assert "Pmax=50.0 kW, capacity=200.0 kWh" in caplog.text
+    assert "ess_max_P_charge_dp_id=50000 W (const)" in caplog.text
+    assert "ess_max_P_discharge_dp_id=30000 W (const)" in caplog.text
+    assert "ess_max_E_dp_id=200000 Wh (const)" in caplog.text
+    assert "pccImportLimitW=170000 W (const)" in caplog.text
+
+
+def test_datapoint_sources_are_logged(cfg, monkeypatch, caplog):
+    srv = FakeServer()
+    srv.install(monkeypatch)
+    assert main.run(cfg(), now=NOW) == 0
+    assert "ess_max_P_charge_dp_id=20000 W (dp pmax)" in caplog.text
+    assert "ess_max_E_dp_id=100000 Wh (dp cap)" in caplog.text
 
 
 def test_clientID_legacy_alias_is_accepted(cfg, monkeypatch):
@@ -116,6 +127,7 @@ def test_input_errors_stop_without_posting(cfg, monkeypatch, caplog, change, nee
 @pytest.mark.parametrize("over,needle", [
     (dict(essChargeEfficiency=1.5), "essChargeEfficiency"),
     (dict(ess_min_soc=90), "ess_min_soc"),
+    (dict(ess_max_P_charge_dp_id=True), "must be a datapoint identifier"),
 ])
 def test_configuration_errors_stop(cfg, monkeypatch, caplog, over, needle):
     FakeServer().install(monkeypatch)
@@ -123,10 +135,137 @@ def test_configuration_errors_stop(cfg, monkeypatch, caplog, over, needle):
     assert needle in caplog.text
 
 
-def test_missing_limit_source_is_a_configuration_error(cfg, monkeypatch, caplog):
+OPERATIONAL = ["pccImportLimitW", "pccExportLimitW", "ess_min_soc", "ess_max_soc",
+               "ess_max_P_charge_dp_id", "ess_max_P_discharge_dp_id", "ess_max_E_dp_id"]
+
+
+@pytest.mark.parametrize("param", OPERATIONAL)
+def test_operational_params_are_required_without_defaults(cfg, monkeypatch, caplog, param):
     FakeServer().install(monkeypatch)
-    assert main.run(cfg(drop=("ess_max_P_dp_id",)), now=NOW) == 1
-    assert "ess_max_P_dp_id or essPowerLimitW" in caplog.text
+    assert main.run(cfg(drop=(param,)), now=NOW) == 1
+    assert f"missing params: {param}" in caplog.text
+
+
+# OPD AC1(a): datapoint form and number form give the same plan for the same value.
+VALUES = {"pccImportLimitW": 14000, "pccExportLimitW": -5000, "ess_min_soc": 25, "ess_max_soc": 70,
+          "ess_max_P_charge_dp_id": 8000, "ess_max_P_discharge_dp_id": 6000, "ess_max_E_dp_id": 80000}
+
+
+def run_plan(cfg, monkeypatch, over, dps=()):
+    srv = FakeServer()
+    for name, value in dps:
+        srv.datapoints[name] = {"lastReadingValue": value}
+    srv.install(monkeypatch)
+    assert main.run(cfg(**over), now=NOW) == 0
+    return srv.posted[0][2]
+
+
+@pytest.mark.parametrize("param", OPERATIONAL)
+def test_each_operational_param_gives_the_same_plan_as_datapoint_and_as_number(cfg, monkeypatch, caplog, param):
+    as_number = run_plan(cfg, monkeypatch, {param: VALUES[param]})
+    assert f"{param}={VALUES[param]:g}" in caplog.text and f"{VALUES[param]:g} " in caplog.text
+    caplog.clear()
+    as_datapoint = run_plan(cfg, monkeypatch, {param: "dp_x"}, dps=[("dp_x", float(VALUES[param]))])
+    assert f"(dp dp_x)" in caplog.text
+    assert as_datapoint == as_number
+
+
+def test_all_operational_params_as_datapoints_equal_all_as_numbers(cfg, monkeypatch):
+    nums = run_plan(cfg, monkeypatch, dict(VALUES))
+    dps = run_plan(cfg, monkeypatch, {k: f"dp_{k}" for k in VALUES}, dps=[(f"dp_{k}", float(v)) for k, v in VALUES.items()])
+    assert dps == nums
+
+
+@pytest.mark.parametrize("param", OPERATIONAL)
+@pytest.mark.parametrize("kind", ["missing", "no_value"])
+def test_missing_or_valueless_operational_datapoint_stops_without_posting(cfg, monkeypatch, caplog, param, kind):
+    srv = FakeServer()
+    if kind == "no_value":
+        srv.datapoints["dp_x"] = {"lastReadingValue": None}
+    srv.install(monkeypatch)
+    assert main.run(cfg(**{param: "dp_x"}), now=NOW) == 1
+    assert srv.posted == []
+    msg = [r.getMessage() for r in caplog.records if "input error" in r.getMessage()]
+    assert msg and param in msg[0] and "dp_x" in msg[0]
+    assert ("does not exist" if kind == "missing" else "has no value") in msg[0]
+
+
+# OPD AC1(c): R2 validation. Number form = configuration error, datapoint form = input error; both exit 1.
+BAD = [
+    ("ess_max_P_charge_dp_id", 0), ("ess_max_P_charge_dp_id", -5), ("ess_max_P_discharge_dp_id", 0),
+    ("ess_max_P_discharge_dp_id", -5), ("ess_max_E_dp_id", 0), ("ess_max_E_dp_id", -1),
+    ("ess_min_soc", -1), ("ess_max_soc", 101), ("ess_min_soc", 80), ("ess_max_soc", 15),
+    ("pccExportLimitW", 170001), ("pccImportLimitW", -1),
+]
+
+
+@pytest.mark.parametrize("param,value", BAD)
+def test_invalid_number_is_a_configuration_error(cfg, monkeypatch, caplog, param, value):
+    srv = FakeServer()
+    srv.install(monkeypatch)
+    assert main.run(cfg(**{param: value}), now=NOW) == 1
+    assert srv.posted == [] and "configuration error" in caplog.text and param in caplog.text
+
+
+@pytest.mark.parametrize("param,value", BAD)
+def test_invalid_datapoint_value_is_an_input_error(cfg, monkeypatch, caplog, param, value):
+    srv = FakeServer()
+    srv.datapoints["dp_x"] = {"lastReadingValue": float(value)}
+    srv.install(monkeypatch)
+    assert main.run(cfg(**{param: "dp_x"}), now=NOW) == 1
+    assert srv.posted == []
+    msg = [r.getMessage() for r in caplog.records if "input error" in r.getMessage()]
+    assert msg and param in msg[0]
+
+
+def test_export_limit_above_import_limit_via_two_datapoints_is_an_input_error(cfg, monkeypatch, caplog):
+    srv = FakeServer()
+    srv.datapoints["lo"] = {"lastReadingValue": 20000.0}
+    srv.datapoints["hi"] = {"lastReadingValue": 15000.0}
+    srv.install(monkeypatch)
+    assert main.run(cfg(pccExportLimitW="lo", pccImportLimitW="hi"), now=NOW) == 1
+    assert srv.posted == [] and "need pccExportLimitW <= pccImportLimitW" in caplog.text
+
+
+def test_positive_lower_pcc_limit_is_accepted(cfg, monkeypatch):
+    plan = run_plan(cfg, monkeypatch, {"pccExportLimitW": 5000})
+    assert len(plan) > 0
+
+
+# OPD AC1(d) end to end: charge 50 kW, discharge 30 kW.
+def test_asymmetric_limits_bound_the_posted_plan(cfg, monkeypatch):
+    def plan(cons, prod, stored_wh):
+        srv = FakeServer()
+        srv.datapoints["end"] = {"lastReadingValue": 80000.0}      # end target 80 % so that charging is wanted
+        srv.forecasts["cons"] = series(10, cons)
+        srv.forecasts["prod"] = series(10, prod)
+        srv.datapoints["charge"]["lastReadingValue"] = stored_wh
+        srv.install(monkeypatch)
+        assert main.run(cfg(ess_max_P_charge_dp_id=50000, ess_max_P_discharge_dp_id=30000, pccImportLimitW=1000000,
+                            pccExportLimitW=-1000000, essEffectiveEndCharge="end"), now=NOW) == 0
+        return [r["value"] for r in srv.posted[0][2]]
+    # Full battery, 100 kW load for 1.5 h, then a long surplus: it empties at the discharge limit.
+    d = plan(lambda i: 100000.0 if i < 120 else 0.0, lambda i: -200000.0 if 120 <= i < 240 else 0.0, 80000.0)
+    # Nearly empty battery and one 400 kW surplus step: it charges at the charge limit.
+    c = plan(lambda i: 0.0, lambda i: -400000.0 if 120 <= i < 135 else 0.0, 15000.0)
+    for values in (c, d):
+        assert max(values) <= 50000 + 1e-3 and min(values) >= -30000 - 1e-3
+    assert min(d) == pytest.approx(-30000, abs=1) and max(c) == pytest.approx(50000, abs=1)
+
+
+# OPD AC1(f): removed / replaced params are configuration errors naming the replacement.
+@pytest.mark.parametrize("param,value,needle", [
+    ("essMinSafeLim", 0, "essMinSafeLim: removed"),
+    ("npPriceIdentifier", "price", "npPriceIdentifier: removed"),
+    ("ess_max_P_dp_id", "pmax", "ess_max_P_charge_dp_id and ess_max_P_discharge_dp_id"),
+    ("essPowerLimitW", 50000, "ess_max_P_charge_dp_id and ess_max_P_discharge_dp_id"),
+    ("essMaxCharge", 200000, "use ess_max_E_dp_id"),
+])
+def test_removed_or_replaced_param_is_a_configuration_error(cfg, monkeypatch, caplog, param, value, needle):
+    srv = FakeServer()
+    srv.install(monkeypatch)
+    assert main.run(cfg(**{param: value}), now=NOW) == 1
+    assert srv.posted == [] and "configuration error" in caplog.text and needle in caplog.text
 
 
 def previous_plan():

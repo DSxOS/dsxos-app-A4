@@ -1,7 +1,9 @@
 """A4 self-consumption maximisation: plans the ESS power so that as little PV energy as possible is exported.
 
 Run by the platform's python-app scheduler with the site's config (default /app/config.yaml).
-Requirements: docs/requirements-a4-nrg-integration.md (A4-IMP), docs/requirements-a4-anti-flicker.md (A4-AF).
+Requirements: docs/requirements-a4-nrg-integration.md (A4-IMP), docs/requirements-a4-anti-flicker.md (A4-AF),
+docs/requirements-opd-operational-datapoints.md (OPD: PCC window, SoC window, charge/discharge power and capacity
+are each a datapoint identifier (string) or a number; removed params are configuration errors).
 Exit codes: 0 = plan (or fallback plan) posted, 1 = configuration/input error or no plan possible.
 """
 import argparse
@@ -33,18 +35,32 @@ DEFAULTS = {
     "writeDebugFile": "on-failure",
     "essEffectiveEndCharge": None,
     "essCurrentPowerPlanIdentifier": None,
-    "ess_max_P_dp_id": None,
-    "ess_max_E_dp_id": None,
-    "essPowerLimitW": None,
-    "essMaxCharge": None,
+}
+# Operational parameters (OPD R1): a datapoint identifier (string) or a number. Unit of the value.
+OPERATIONAL = {
+    "pccImportLimitW": "W",             # upper limit of the net PCC power, import positive
+    "pccExportLimitW": "W",             # lower limit of the net PCC power, signed (negative = export allowed)
+    "ess_min_soc": "%",
+    "ess_max_soc": "%",
+    "ess_max_P_charge_dp_id": "W",
+    "ess_max_P_discharge_dp_id": "W",
+    "ess_max_E_dp_id": "Wh",
 }
 REQUIRED = [
     "apiEndpoint", "clientId", "token",
     "consumptionPrognosisIdentifier", "productionPrognosisIdentifier", "essEffectiveCharge",
-    "pccImportLimitW", "pccExportLimitW", "ess_min_soc", "ess_max_soc",
+    *OPERATIONAL,
     "essResultPowerPlanIdentifier", "interval", "min_period",
 ]
-IGNORED = ["npPriceIdentifier", "essMinSafeLim"]
+_P_REPLACEMENT = "use ess_max_P_charge_dp_id and ess_max_P_discharge_dp_id (a datapoint identifier or a number, W, both positive)"
+# Removed or replaced params (OPD R5): present in the YAML = configuration error that names the replacement.
+REMOVED = {
+    "essMinSafeLim": "removed, delete it",
+    "npPriceIdentifier": "removed, delete it",
+    "ess_max_P_dp_id": "replaced: " + _P_REPLACEMENT,
+    "essPowerLimitW": "replaced: " + _P_REPLACEMENT,
+    "essMaxCharge": "replaced: use ess_max_E_dp_id (a datapoint identifier, or the capacity as a number in Wh)",
+}
 
 
 class ConfigError(Exception):
@@ -59,22 +75,49 @@ def empty(v):
     return v is None or v == ""
 
 
+def is_number(v):
+    return isinstance(v, (int, float)) and not isinstance(v, bool)
+
+
+def limit_problems(vals):
+    """R2 checks on resolved operational values (a dict name -> number; checks whose params are absent are skipped).
+
+    Returns [(names involved, message)]."""
+    p = vals.get
+    checks = [
+        (("ess_max_P_charge_dp_id",), "ess_max_P_charge_dp_id must be > 0", lambda: p("ess_max_P_charge_dp_id") > 0),
+        (("ess_max_P_discharge_dp_id",), "ess_max_P_discharge_dp_id must be > 0",
+         lambda: p("ess_max_P_discharge_dp_id") > 0),
+        (("ess_max_E_dp_id",), "ess_max_E_dp_id must be > 0", lambda: p("ess_max_E_dp_id") > 0),
+        (("ess_min_soc",), "ess_min_soc must be >= 0", lambda: p("ess_min_soc") >= 0),
+        (("ess_max_soc",), "ess_max_soc must be <= 100", lambda: p("ess_max_soc") <= 100),
+        (("ess_min_soc", "ess_max_soc"), "need ess_min_soc < ess_max_soc", lambda: p("ess_min_soc") < p("ess_max_soc")),
+        (("pccExportLimitW", "pccImportLimitW"), "need pccExportLimitW <= pccImportLimitW",
+         lambda: p("pccExportLimitW") <= p("pccImportLimitW")),
+    ]
+    return [(names, msg) for names, msg, ok in checks if all(n in vals for n in names) and not ok()]
+
+
 def load_params(raw):
-    """Merge defaults into params and validate (A4-IMP R5). Raises ConfigError."""
+    """Merge defaults into params and validate (A4-IMP R5, OPD R1/R2/R5/R6). Raises ConfigError."""
     if not isinstance(raw, dict) or not isinstance(raw.get("params"), dict):
         raise ConfigError("config has no 'params' section")
+    stale = [f"{k}: {msg}" for k, msg in REMOVED.items() if k in raw["params"]]
+    if stale:
+        raise ConfigError("removed or replaced params: " + "; ".join(stale))
     params = dict(DEFAULTS)
     params.update(raw["params"])
     if empty(params.get("clientId")) and not empty(params.get("clientID")):
         params["clientId"] = params["clientID"]          # legacy spelling
     missing = [k for k in REQUIRED if empty(params.get(k))]
-    if empty(params["ess_max_P_dp_id"]) and empty(params["essPowerLimitW"]):
-        missing.append("ess_max_P_dp_id or essPowerLimitW")
-    if empty(params["ess_max_E_dp_id"]) and empty(params["essMaxCharge"]):
-        missing.append("ess_max_E_dp_id or essMaxCharge")
     if missing:
         raise ConfigError(f"missing params: {', '.join(missing)}")
-    checks = [
+    bad_type = [k for k in OPERATIONAL if not (is_number(params[k]) or isinstance(params[k], str))]
+    if bad_type:
+        raise ConfigError(f"{', '.join(bad_type)}: must be a datapoint identifier (string) or a number")
+    consts = {k: float(params[k]) for k in OPERATIONAL if is_number(params[k])}
+    checks = [(False, msg) for _, msg in limit_problems(consts)]
+    checks += [
         (0 < float(params["essChargeEfficiency"]) <= 1, "essChargeEfficiency must be in (0, 1]"),
         (0 < float(params["essDischargeEfficiency"]) <= 1, "essDischargeEfficiency must be in (0, 1]"),
         (float(params["essDegradationWeight"]) >= 0, "essDegradationWeight must be >= 0"),
@@ -86,18 +129,12 @@ def load_params(raw):
         (float(params["maxInputAgeS"]) > 0, "maxInputAgeS must be > 0"),
         (int(params["interval"]) > 0, "interval must be > 0"),
         (int(params["min_period"]) >= 0, "min_period must be >= 0"),
-        (0 <= float(params["ess_min_soc"]) < float(params["ess_max_soc"]) <= 100,
-         "need 0 <= ess_min_soc < ess_max_soc <= 100"),
-        (float(params["pccExportLimitW"]) <= 0, "pccExportLimitW must be <= 0 (export as a negative limit)"),
         (params["writeDebugFile"] in ("on-failure", "always", "never"),
          "writeDebugFile must be on-failure, always or never"),
     ]
     errors = [msg for ok, msg in checks if not ok]
     if errors:
         raise ConfigError("; ".join(errors))
-    for name in IGNORED:
-        if not empty(params.get(name)):
-            logger.info(f"param {name} is ignored (not used by A4).")
     return params
 
 
@@ -121,11 +158,26 @@ def read_value(identifier, param, now=None, max_age_s=None):
     return float(val)
 
 
-def value_or_datapoint(params, dp_param, static_param):
-    """ESS limit from its datapoint if configured, otherwise the fixed number (A4-IMP D5). In the param's unit."""
-    if not empty(params.get(dp_param)):
-        return read_value(params[dp_param], dp_param)
-    return float(params[static_param])
+def value_or_datapoint(params, name):
+    """Operational param (OPD R1): a string is a datapoint (latest value, read now), a number is a constant.
+
+    Returns (value in the param's unit, source text 'dp <id>' or 'const'). Raises InputError."""
+    v = params[name]
+    if isinstance(v, str):
+        return read_value(v, name), f"dp {v}"
+    return float(v), "const"
+
+
+def resolve_limits(params):
+    """Resolve all operational params once per run and check them (OPD R1, R2). Raises InputError."""
+    vals, src = {}, {}
+    for name in OPERATIONAL:
+        vals[name], src[name] = value_or_datapoint(params, name)
+    for names, msg in limit_problems(vals):
+        if any(src[n] != "const" for n in names):       # all-const violations were configuration errors already
+            detail = ", ".join(f"{n}={vals[n]:g} ({src[n]})" for n in names)
+            raise InputError(f"{msg}: {detail}")
+    return vals, src
 
 
 def read_forecast(identifier, param):
@@ -206,21 +258,20 @@ def run(config_path, now=None):
         if not result_dp:
             raise InputError(f"result datapoint '{params['essResultPowerPlanIdentifier']}' does not exist")
         result_dp_id = result_dp[0]["id"]
-        p_max_kw = value_or_datapoint(params, "ess_max_P_dp_id", "essPowerLimitW") / 1000.0
-        capacity_kwh = value_or_datapoint(params, "ess_max_E_dp_id", "essMaxCharge") / 1000.0
+        lim, lim_src = resolve_limits(params)
+        capacity_kwh = lim["ess_max_E_dp_id"] / 1000.0
         e0_kwh = read_value(params["essEffectiveCharge"], "essEffectiveCharge",
                             now=now, max_age_s=float(params["maxInputAgeS"])) / 1000.0
         end_id = params.get("essEffectiveEndCharge")
         e_end_kwh = (read_value(end_id, "essEffectiveEndCharge") / 1000.0) if end_id else e0_kwh
-        if p_max_kw <= 0 or capacity_kwh <= 0:
-            raise InputError(f"ESS power limit ({p_max_kw} kW) and capacity ({capacity_kwh} kWh) must be > 0")
         load = read_forecast(params["consumptionPrognosisIdentifier"], "consumptionPrognosisIdentifier")
         pv = read_forecast(params["productionPrognosisIdentifier"], "productionPrognosisIdentifier")
     except InputError as e:
         logger.error(f"input error: {e}")
         return 1
 
-    logger.info(f"inputs: Pmax={p_max_kw} kW, capacity={capacity_kwh} kWh, E0={e0_kwh:.1f} kWh "
+    limits_txt = ", ".join(f"{n}={lim[n]:g} {OPERATIONAL[n]} ({lim_src[n]})" for n in OPERATIONAL)
+    logger.info(f"inputs: {limits_txt}, E0={e0_kwh:.1f} kWh "
                 f"(SoC {100 * e0_kwh / capacity_kwh:.1f} %), Eend={e_end_kwh:.1f} kWh, "
                 f"forecast values load/pv={len(load)}/{len(pv)}, start={iso(start)}")
 
@@ -231,10 +282,11 @@ def run(config_path, now=None):
 
     inp = a4model.PlanInputs(
         interval_s=interval_s, load_kw=load_s, pv_kw=pv_s,
-        p_max_kw=p_max_kw, capacity_kwh=capacity_kwh, e0_kwh=e0_kwh, e_end_kwh=e_end_kwh,
-        soc_min_pct=float(params["ess_min_soc"]), soc_max_pct=float(params["ess_max_soc"]),
-        import_limit_kw=float(params["pccImportLimitW"]) / 1000.0,
-        export_limit_kw=-float(params["pccExportLimitW"]) / 1000.0,
+        ch_max_kw=lim["ess_max_P_charge_dp_id"] / 1000.0, dis_max_kw=lim["ess_max_P_discharge_dp_id"] / 1000.0,
+        capacity_kwh=capacity_kwh, e0_kwh=e0_kwh, e_end_kwh=e_end_kwh,
+        soc_min_pct=lim["ess_min_soc"], soc_max_pct=lim["ess_max_soc"],
+        import_limit_kw=lim["pccImportLimitW"] / 1000.0,
+        pcc_min_kw=lim["pccExportLimitW"] / 1000.0,
         eta_charge=float(params["essChargeEfficiency"]), eta_discharge=float(params["essDischargeEfficiency"]),
         degradation_weight=float(params["essDegradationWeight"]),
         loss_weight=float(params["essLossWeight"]),
@@ -251,9 +303,9 @@ def run(config_path, now=None):
 
     logger.info(f"solved ({result.status}): {len(times)} steps {iso(times[0])} .. {iso(times[-1])}, "
                 f"export {result.export_kwh:.2f} kWh, losses {result.loss_kwh:.2f} kWh, ramp term {result.ramp_objective:.4f}, end energy {result.energy_kwh[-1]:.1f} kWh")
-    if result.import_overrun_kwh > 1e-6 or result.export_overrun_kwh > 1e-6:
-        logger.warning(f"plan exceeds the PCC limits: import {result.import_overrun_kwh:.2f} kWh, "
-                       f"export {result.export_overrun_kwh:.2f} kWh over the horizon")
+    if result.import_overrun_kwh > 1e-6 or result.below_limit_kwh > 1e-6:
+        logger.warning(f"plan violates the PCC window: import {result.import_overrun_kwh:.2f} kWh over the upper limit, "
+                       f"{result.below_limit_kwh:.2f} kWh below the lower limit over the horizon")
     if abs(result.end_deviation_kwh) > 1e-6:
         logger.warning(f"end energy misses its target by {result.end_deviation_kwh:.2f} kWh")
     readings = [{"time": iso(t), "value": float(v * 1000.0)} for t, v in zip(times, result.ess_kw)]

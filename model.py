@@ -1,6 +1,7 @@
 """A4 optimisation model (A4-IMP R2-R4): ESS schedule that maximises PV self-consumption (minimises PCC export).
 
-Units: power kW, energy kWh. Positive ESS power = charging. PCC = load + pv + ESS (pv negative = generation).
+Units: power kW, energy kWh. Positive ESS power = charging. Net PCC power (import positive) = load + pv + ESS
+(pv negative = generation), kept in a soft signed window [L, U] (OPD R4); separate charge/discharge limits (OPD R3).
 The objective is in kWh-weighted units (no price): export + weighted conversion losses + tiny charge term + penalties.
 """
 from dataclasses import dataclass, field
@@ -15,14 +16,15 @@ class PlanInputs:
     interval_s: int
     load_kw: List[float]
     pv_kw: List[float]                  # negative = generation
-    p_max_kw: float
+    ch_max_kw: float                    # charge power limit, positive magnitude (OPD R3)
+    dis_max_kw: float                   # discharge power limit, positive magnitude
     capacity_kwh: float
     e0_kwh: float                       # total stored energy at the start
     e_end_kwh: float                    # target stored energy at the end
     soc_min_pct: float
     soc_max_pct: float
-    import_limit_kw: float              # soft
-    export_limit_kw: float              # soft, positive number
+    import_limit_kw: float              # U: soft upper limit of the net PCC power (import positive)
+    pcc_min_kw: float                   # L: soft lower limit of the net PCC power (signed; < 0 allows export, > 0 = minimum import)
     eta_charge: float = 0.95
     eta_discharge: float = 0.95
     degradation_weight: float = 1e-6    # per kWh charged
@@ -41,7 +43,7 @@ class PlanResult:
     export_kwh: float = 0.0
     loss_kwh: float = 0.0
     import_overrun_kwh: float = 0.0
-    export_overrun_kwh: float = 0.0
+    below_limit_kwh: float = 0.0        # energy by which the net PCC power is below its lower limit
     end_deviation_kwh: float = 0.0
     objective: Optional[float] = None
     ramp_objective: float = 0.0
@@ -66,7 +68,7 @@ def build_model(inp: PlanInputs) -> pyo.ConcreteModel:
     dt_h = inp.interval_s / 3600.0
     e_min, e_max = energy_bounds(inp)
     e_end = min(max(inp.e_end_kwh, e_min), e_max)
-    p_max = inp.p_max_kw
+    ch_max, dis_max = inp.ch_max_kw, inp.dis_max_kw
 
     m = pyo.ConcreteModel(name="A4")
     m.dt_h = dt_h
@@ -75,20 +77,21 @@ def build_model(inp: PlanInputs) -> pyo.ConcreteModel:
     m.T = pyo.RangeSet(0, n - 1)
     m.K = pyo.RangeSet(0, n)
 
-    m.ch = pyo.Var(m.T, bounds=(0, p_max))
-    m.dis = pyo.Var(m.T, bounds=(0, p_max))
+    m.ch = pyo.Var(m.T, bounds=(0, ch_max))
+    m.dis = pyo.Var(m.T, bounds=(0, dis_max))
     m.zc = pyo.Var(m.T, domain=pyo.Binary)
-    m.ch_on = pyo.Constraint(m.T, rule=lambda m, t: m.ch[t] <= p_max * m.zc[t])
-    m.dis_on = pyo.Constraint(m.T, rule=lambda m, t: m.dis[t] <= p_max * (1 - m.zc[t]))
+    m.ch_on = pyo.Constraint(m.T, rule=lambda m, t: m.ch[t] <= ch_max * m.zc[t])
+    m.dis_on = pyo.Constraint(m.T, rule=lambda m, t: m.dis[t] <= dis_max * (1 - m.zc[t]))
 
     m.imp = pyo.Var(m.T, domain=pyo.NonNegativeReals)
     m.exp = pyo.Var(m.T, domain=pyo.NonNegativeReals)
     m.o_imp = pyo.Var(m.T, domain=pyo.NonNegativeReals)
-    m.o_exp = pyo.Var(m.T, domain=pyo.NonNegativeReals)
+    m.o_exp = pyo.Var(m.T, domain=pyo.NonNegativeReals)    # slack below the lower limit L (OPD R4)
     m.balance = pyo.Constraint(m.T, rule=lambda m, t:
                                m.imp[t] - m.exp[t] == inp.load_kw[t] + inp.pv_kw[t] + m.ch[t] - m.dis[t])
-    m.imp_limit = pyo.Constraint(m.T, rule=lambda m, t: m.imp[t] <= inp.import_limit_kw + m.o_imp[t])
-    m.exp_limit = pyo.Constraint(m.T, rule=lambda m, t: m.exp[t] <= inp.export_limit_kw + m.o_exp[t])
+    # Signed net PCC window (OPD R4): net = imp - exp in [L - o_exp, U + o_imp]
+    m.imp_limit = pyo.Constraint(m.T, rule=lambda m, t: m.imp[t] - m.exp[t] <= inp.import_limit_kw + m.o_imp[t])
+    m.exp_limit = pyo.Constraint(m.T, rule=lambda m, t: m.imp[t] - m.exp[t] >= inp.pcc_min_kw - m.o_exp[t])
 
     m.E = pyo.Var(m.K)
     m.E[0].fix(inp.e0_kwh)
@@ -141,7 +144,7 @@ def solve(m: pyo.ConcreteModel, time_limit_s: float = 300, solver_name: str = "g
         export_kwh=sum(pyo.value(m.exp[t]) for t in m.T) * m.dt_h,
         loss_kwh=sum(pyo.value(loss_kw(m, t)) for t in m.T) * m.dt_h,
         import_overrun_kwh=sum(pyo.value(m.o_imp[t]) for t in m.T) * m.dt_h,
-        export_overrun_kwh=sum(pyo.value(m.o_exp[t]) for t in m.T) * m.dt_h,
+        below_limit_kwh=sum(pyo.value(m.o_exp[t]) for t in m.T) * m.dt_h,
         end_deviation_kwh=pyo.value(m.dev_up) - pyo.value(m.dev_down),
         objective=pyo.value(m.cost),
         ramp_objective=pyo.value(m.ramp_term),
