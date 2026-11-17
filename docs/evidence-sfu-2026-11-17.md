@@ -6,7 +6,7 @@ Implemented by a module-worker. Validated by an independent validator agent, whi
 | AC | Verdict | Evidence |
 |---|---|---|
 | AC1 (a)-(d) | PASS | See the command below. The validator reviewed the diff against R1–R6: `0 <= min < max <= 1` with the percent hint; bounds without `/100`; every energy input converted with `capacity*min + clamp(u, 0, capacity*(max-min))` and a WARNING on clamp; the R4 INFO line; no objective, ramp or loss change; docs updated. |
-| AC2 | NOT RUN | Needs the NRG deploy and the owner's config push. |
+| AC2 | PASS | See "AC2 live" below. |
 
 ## AC1: pytest (validator, host `dsxos` = NRG VM)
 
@@ -20,3 +20,15 @@ EXIT=0
 ```
 
 Teardown: the temp dirs and archives were removed (`ls -d /tmp/sfu*` reports none), and no running app containers were touched.
+
+## AC2 live (NRG, after the deploy of NRG `defb40b`, deploy job Succeeded 18:48:40Z)
+
+First run after the deploy, 2026-11-17 19:00:10Z (`sudo docker logs a4` on host `dsxos`):
+- The R4 line shows `ess_min_soc=0.15, ess_max_soc=0.8`, `capacity=350 kWh`, and usable start energy=0.000 kWh, total start energy=52.500 kWh, total end target=52.500 kWh.
+- Result: solved (ok/optimal): 1941 steps; plan posted to ess_p_a4_test.
+
+SQL read of `datapoint.last_reading_value` at 19:00:35–38Z:
+- `ess_1_min_batt_op_lim` = 0.15 and `ess_1_max_batt_op_lim` = 0.8, equal to the logged values.
+- `B1_PIXII_713_WHRtg` = 350000, so the capacity is 350 kWh, as logged.
+- `B1_PIXII_713_WHAvail` = 0, so usable energy is 0 kWh, as logged. `bess_SOC` = 0.143 is below the 0.15 limit.
+- Total = 350 × 0.15 + 0 = 52.5 kWh, as logged.
