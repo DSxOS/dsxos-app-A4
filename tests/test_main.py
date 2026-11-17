@@ -54,7 +54,7 @@ def cfg(tmp_path, monkeypatch):
         "consumptionPrognosisIdentifier": "cons", "productionPrognosisIdentifier": "prod",
         "ess_max_P_charge_dp_id": "pmax", "ess_max_P_discharge_dp_id": "pmax", "ess_max_E_dp_id": "cap",
         "essEffectiveCharge": "charge",
-        "ess_min_soc": 15, "ess_max_soc": 80, "pccImportLimitW": 170000, "pccExportLimitW": 0,
+        "ess_min_soc": 0.15, "ess_max_soc": 0.80, "pccImportLimitW": 170000, "pccExportLimitW": 0,
         "essResultPowerPlanIdentifier": "ess_p_a4_test", "interval": 900, "min_period": 21600,
         "solverTimeLimitS": 60,
     }
@@ -126,7 +126,7 @@ def test_input_errors_stop_without_posting(cfg, monkeypatch, caplog, change, nee
 
 @pytest.mark.parametrize("over,needle", [
     (dict(essChargeEfficiency=1.5), "essChargeEfficiency"),
-    (dict(ess_min_soc=90), "ess_min_soc"),
+    (dict(ess_min_soc=0.9), "ess_min_soc"),
     (dict(ess_max_P_charge_dp_id=True), "must be a datapoint identifier"),
 ])
 def test_configuration_errors_stop(cfg, monkeypatch, caplog, over, needle):
@@ -147,7 +147,7 @@ def test_operational_params_are_required_without_defaults(cfg, monkeypatch, capl
 
 
 # OPD AC1(a): datapoint form and number form give the same plan for the same value.
-VALUES = {"pccImportLimitW": 14000, "pccExportLimitW": -5000, "ess_min_soc": 25, "ess_max_soc": 70,
+VALUES = {"pccImportLimitW": 14000, "pccExportLimitW": -5000, "ess_min_soc": 0.25, "ess_max_soc": 0.70,
           "ess_max_P_charge_dp_id": 8000, "ess_max_P_discharge_dp_id": 6000, "ess_max_E_dp_id": 80000}
 
 
@@ -194,7 +194,7 @@ def test_missing_or_valueless_operational_datapoint_stops_without_posting(cfg, m
 BAD = [
     ("ess_max_P_charge_dp_id", 0), ("ess_max_P_charge_dp_id", -5), ("ess_max_P_discharge_dp_id", 0),
     ("ess_max_P_discharge_dp_id", -5), ("ess_max_E_dp_id", 0), ("ess_max_E_dp_id", -1),
-    ("ess_min_soc", -1), ("ess_max_soc", 101), ("ess_min_soc", 80), ("ess_max_soc", 15),
+    ("ess_min_soc", -0.1), ("ess_max_soc", 1.5), ("ess_min_soc", 0.9), ("ess_max_soc", 0.1),
     ("pccExportLimitW", 170001), ("pccImportLimitW", -1),
 ]
 
@@ -236,7 +236,7 @@ def test_positive_lower_pcc_limit_is_accepted(cfg, monkeypatch):
 def test_asymmetric_limits_bound_the_posted_plan(cfg, monkeypatch):
     def plan(cons, prod, stored_wh):
         srv = FakeServer()
-        srv.datapoints["end"] = {"lastReadingValue": 80000.0}      # end target 80 % so that charging is wanted
+        srv.datapoints["end"] = {"lastReadingValue": 80000.0}      # usable end target 80 kWh (clamped to the window) so that charging is wanted
         srv.forecasts["cons"] = series(10, cons)
         srv.forecasts["prod"] = series(10, prod)
         srv.datapoints["charge"]["lastReadingValue"] = stored_wh
