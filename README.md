@@ -11,7 +11,7 @@ the decisions of dsxos-app-A5 A5-IMP and A5-AUTH).
 
 Per time step (`interval`):
 - **ESS:** charge in [0, Pch], discharge in [0, Pdis] (separate limits, both positive), never both. Stored energy `E[k+1] = E[k] + (ch·η_ch − dis/η_dis)·Δt`,
-  within [`ess_min_soc`, `ess_max_soc`] % of the capacity (widened to the start value if it is already outside).
+  within [`ess_min_soc`, `ess_max_soc`] x capacity (SoC limits are fractions 0..1; widened to the start value if it is already outside). The energy inputs are usable energy above `ess_min_soc` and are converted to total energy: `capacity*min + clamp(u, 0, capacity*(max-min))` (WARNING when clamped).
 - **PCC:** net = import − export = load + pv + ESS, with pv negative for generation. The net power is kept in a
   signed window `[pccExportLimitW, pccImportLimitW]` by soft limits (penalty, WARNING): `net ≤ U + oU`,
   `net ≥ L − oL`. `L ≤ 0` is an export limit; `L > 0` is a minimum import.
@@ -34,12 +34,12 @@ See [example_config.yaml](example_config.yaml).
 | `apiEndpoint`, `clientId` (legacy `clientID`), `token` | | required | Data server API and credential (client ID + secret) |
 | `consumptionPrognosisIdentifier` / `productionPrognosisIdentifier` | W | required | Load / PV forecast (PV negative) |
 | `ess_max_P_charge_dp_id`, `ess_max_P_discharge_dp_id` | W | required | Charge / discharge power limit, positive magnitudes: datapoint identifier or number (may be the same datapoint) |
-| `ess_max_E_dp_id` | Wh | required | ESS capacity: datapoint identifier or number |
-| `ess_min_soc`, `ess_max_soc` | % | required | SoC window: datapoint identifier or number; `0 ≤ min < max ≤ 100` |
+| `ess_max_E_dp_id` | Wh | required | Gross ESS capacity: datapoint identifier or number |
+| `ess_min_soc`, `ess_max_soc` | fraction | required | SoC limits as fractions (0.15, not 15): datapoint identifier or number; `0 ≤ min < max ≤ 1`; percent values are rejected |
 | `pccImportLimitW` | W | required | Upper limit of the net PCC power (import positive): datapoint identifier or number |
 | `pccExportLimitW` | W | required | Lower limit of the net PCC power, signed (negative = export allowed, 0 = no export, positive = minimum import): datapoint identifier or number; must be ≤ `pccImportLimitW` |
-| `essEffectiveCharge` | Wh | required | Datapoint: total stored energy now (at most `maxInputAgeS` old) |
-| `essEffectiveEndCharge` | Wh | start energy | Optional datapoint: end target |
+| `essEffectiveCharge` | Wh | required | Datapoint: usable energy above `ess_min_soc` now (0 .. capacity x (max - min); at most `maxInputAgeS` old); converted to total energy, out-of-range values are clamped with a WARNING |
+| `essEffectiveEndCharge` | Wh | start energy | Optional datapoint: end target as usable energy above `ess_min_soc` (converted like the start energy); default = the converted start energy |
 | `essResultPowerPlanIdentifier` | W | required | Datapoint that receives the plan |
 | `essCurrentPowerPlanIdentifier` | W | result datapoint | Datapoint whose latest plan is the fallback |
 | `interval`, `min_period` | s | required | Time step; minimum forecast horizon |
@@ -55,7 +55,7 @@ See [example_config.yaml](example_config.yaml).
 `ess_max_P_charge_dp_id` to `pccExportLimitW`): a string is a datapoint identifier whose latest value
 (`lastReadingValue`, no staleness check) is read at every run; a number is a constant. A missing datapoint or one
 without a value is an input error (exit 1, nothing posted). Values are validated after resolving (powers and capacity
-> 0, `0 ≤ ess_min_soc < ess_max_soc ≤ 100`, `pccExportLimitW ≤ pccImportLimitW`): a violation is a configuration error
+> 0, `0 ≤ ess_min_soc < ess_max_soc ≤ 1`, `pccExportLimitW ≤ pccImportLimitW`): a violation is a configuration error
 for a number and an input error for a datapoint. The resolved values and their sources (`dp <id>` or `const`) are logged
 once per run. There are no defaults for these.
 

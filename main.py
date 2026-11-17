@@ -40,8 +40,8 @@ DEFAULTS = {
 OPERATIONAL = {
     "pccImportLimitW": "W",             # upper limit of the net PCC power, import positive
     "pccExportLimitW": "W",             # lower limit of the net PCC power, signed (negative = export allowed)
-    "ess_min_soc": "%",
-    "ess_max_soc": "%",
+    "ess_min_soc": "fraction",          # SoC limits are fractions 0..1 (SFU D1)
+    "ess_max_soc": "fraction",
     "ess_max_P_charge_dp_id": "W",
     "ess_max_P_discharge_dp_id": "W",
     "ess_max_E_dp_id": "Wh",
@@ -79,6 +79,17 @@ def is_number(v):
     return isinstance(v, (int, float)) and not isinstance(v, bool)
 
 
+def soc_msg(vals, rule):
+    """SFU R1 message: names both SoC parameters with their values; says 'fractions' when a value is > 1."""
+    mn, mx = vals.get("ess_min_soc"), vals.get("ess_max_soc")
+    fmt = lambda v: "?" if v is None else format(v, "g")
+    txt = f"{rule} (ess_min_soc={fmt(mn)}, ess_max_soc={fmt(mx)})"
+    for n, v in (("ess_min_soc", mn), ("ess_max_soc", mx)):
+        if v is not None and v > 1:
+            txt += f"; the SoC limits are fractions: {n}={v:g} looks like percent; use {v / 100:g}"
+    return txt
+
+
 def limit_problems(vals):
     """R2 checks on resolved operational values (a dict name -> number; checks whose params are absent are skipped).
 
@@ -89,9 +100,10 @@ def limit_problems(vals):
         (("ess_max_P_discharge_dp_id",), "ess_max_P_discharge_dp_id must be > 0",
          lambda: p("ess_max_P_discharge_dp_id") > 0),
         (("ess_max_E_dp_id",), "ess_max_E_dp_id must be > 0", lambda: p("ess_max_E_dp_id") > 0),
-        (("ess_min_soc",), "ess_min_soc must be >= 0", lambda: p("ess_min_soc") >= 0),
-        (("ess_max_soc",), "ess_max_soc must be <= 100", lambda: p("ess_max_soc") <= 100),
-        (("ess_min_soc", "ess_max_soc"), "need ess_min_soc < ess_max_soc", lambda: p("ess_min_soc") < p("ess_max_soc")),
+        (("ess_min_soc",), soc_msg(vals, "ess_min_soc must be >= 0"), lambda: p("ess_min_soc") >= 0),
+        (("ess_max_soc",), soc_msg(vals, "ess_max_soc must be <= 1"), lambda: p("ess_max_soc") <= 1),
+        (("ess_min_soc", "ess_max_soc"), soc_msg(vals, "need 0 <= ess_min_soc < ess_max_soc <= 1"),
+         lambda: p("ess_min_soc") < p("ess_max_soc")),
         (("pccExportLimitW", "pccImportLimitW"), "need pccExportLimitW <= pccImportLimitW",
          lambda: p("pccExportLimitW") <= p("pccImportLimitW")),
     ]
@@ -180,6 +192,15 @@ def resolve_limits(params):
     return vals, src
 
 
+def to_total(param, usable_kwh, capacity_kwh, smin, smax):
+    """SFU R3: usable energy above ess_min_soc -> total stored energy (kWh); WARNING when clamped."""
+    total, clamped = a4model.usable_to_total_kwh(usable_kwh, capacity_kwh, smin, smax)
+    if clamped != usable_kwh:
+        logger.warning(f"{param}: usable energy {usable_kwh:.3f} kWh is outside 0..{capacity_kwh * (smax - smin):.3f} kWh "
+                       f"(capacity x (ess_max_soc - ess_min_soc)); clamped to {clamped:.3f} kWh")
+    return total
+
+
 def read_forecast(identifier, param):
     readings = query_utils.get_last_prognosis_readings(identifier)
     if readings is None:
@@ -260,10 +281,16 @@ def run(config_path, now=None):
         result_dp_id = result_dp[0]["id"]
         lim, lim_src = resolve_limits(params)
         capacity_kwh = lim["ess_max_E_dp_id"] / 1000.0
-        e0_kwh = read_value(params["essEffectiveCharge"], "essEffectiveCharge",
+        smin, smax = lim["ess_min_soc"], lim["ess_max_soc"]
+        u0_kwh = read_value(params["essEffectiveCharge"], "essEffectiveCharge",
                             now=now, max_age_s=float(params["maxInputAgeS"])) / 1000.0
+        e0_kwh = to_total("essEffectiveCharge", u0_kwh, capacity_kwh, smin, smax)
         end_id = params.get("essEffectiveEndCharge")
-        e_end_kwh = (read_value(end_id, "essEffectiveEndCharge") / 1000.0) if end_id else e0_kwh
+        if end_id:
+            u_end_kwh = read_value(end_id, "essEffectiveEndCharge") / 1000.0
+            e_end_kwh = to_total("essEffectiveEndCharge", u_end_kwh, capacity_kwh, smin, smax)
+        else:
+            u_end_kwh, e_end_kwh = None, e0_kwh        # default end target = the converted start energy (SFU R3)
         load = read_forecast(params["consumptionPrognosisIdentifier"], "consumptionPrognosisIdentifier")
         pv = read_forecast(params["productionPrognosisIdentifier"], "productionPrognosisIdentifier")
     except InputError as e:
@@ -271,9 +298,14 @@ def run(config_path, now=None):
         return 1
 
     limits_txt = ", ".join(f"{n}={lim[n]:g} {OPERATIONAL[n]} ({lim_src[n]})" for n in OPERATIONAL)
-    logger.info(f"inputs: {limits_txt}, E0={e0_kwh:.1f} kWh "
-                f"(SoC {100 * e0_kwh / capacity_kwh:.1f} %), Eend={e_end_kwh:.1f} kWh, "
-                f"forecast values load/pv={len(load)}/{len(pv)}, start={iso(start)}")
+    logger.info(f"inputs: {limits_txt}, forecast values load/pv={len(load)}/{len(pv)}, start={iso(start)}")
+    end_txt = ("usable end target = start (default)" if u_end_kwh is None else f"usable end target={u_end_kwh:.3f} kWh")
+    logger.info(f"resolved inputs: ess_min_soc={smin:g}, ess_max_soc={smax:g} (fractions), capacity={capacity_kwh:.3f} kWh, "
+                f"usable start energy={u0_kwh:.3f} kWh, total start energy={e0_kwh:.3f} kWh, {end_txt}, "
+                f"total end target={e_end_kwh:.3f} kWh, "
+                f"charge limit={lim['ess_max_P_charge_dp_id'] / 1000.0:g} kW, "
+                f"discharge limit={lim['ess_max_P_discharge_dp_id'] / 1000.0:g} kW, "
+                f"PCC limits={lim['pccExportLimitW'] / 1000.0:g}..{lim['pccImportLimitW'] / 1000.0:g} kW")
 
     series = build_series(load, pv, start, interval_s, int(params["min_period"]))
     if series is None:
@@ -284,7 +316,7 @@ def run(config_path, now=None):
         interval_s=interval_s, load_kw=load_s, pv_kw=pv_s,
         ch_max_kw=lim["ess_max_P_charge_dp_id"] / 1000.0, dis_max_kw=lim["ess_max_P_discharge_dp_id"] / 1000.0,
         capacity_kwh=capacity_kwh, e0_kwh=e0_kwh, e_end_kwh=e_end_kwh,
-        soc_min_pct=lim["ess_min_soc"], soc_max_pct=lim["ess_max_soc"],
+        soc_min_frac=smin, soc_max_frac=smax,
         import_limit_kw=lim["pccImportLimitW"] / 1000.0,
         pcc_min_kw=lim["pccExportLimitW"] / 1000.0,
         eta_charge=float(params["essChargeEfficiency"]), eta_discharge=float(params["essDischargeEfficiency"]),
