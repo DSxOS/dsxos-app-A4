@@ -7,7 +7,7 @@ import model as a4model
 def inputs(**over):
     # Hourly steps: load 10 kW; 30 kW PV in steps 2-4 (20 kW surplus x 3 h = 60 kWh).
     base = dict(interval_s=3600, load_kw=[10.0] * 8, pv_kw=[0, 0, -30, -30, -30, 0, 0, 0],
-                ch_max_kw=40.0, dis_max_kw=40.0, capacity_kwh=100.0, e0_kwh=30.0, e_end_kwh=30.0, soc_min_frac=0.15, soc_max_frac=0.80,
+                ch_max_kw=40.0, dis_max_kw=40.0, capacity_kwh=80.0, e0_kwh=30.0, e_end_kwh=30.0,
                 import_limit_kw=1000.0, pcc_min_kw=-1000.0, eta_charge=0.95, eta_discharge=0.95,
                 degradation_weight=1e-6, pcc_penalty_per_kwh=1000.0, end_penalty_per_kwh=0.0)
     base.update(over)
@@ -21,11 +21,11 @@ def solve(inp):
 
 
 def test_pv_surplus_is_stored_by_making_room_first():
-    # Without action E would go 30 -> 87 (> 80 max) and 7.4 kWh would be exported. The optimum discharges into the
-    # morning load first (down to >= 15 kWh) so that all 60 kWh of surplus fit: export 0.
+    # Without action E would go 30 -> 87 (> capacity 80) and 7.4 kWh would be exported. The optimum discharges into the
+    # morning load first (down to >= 0 kWh) so that all 60 kWh of surplus fit: export 0.
     r = solve(inputs())
     assert r.export_kwh == pytest.approx(0.0, abs=1e-6)
-    assert all(15.0 - 1e-6 <= e <= 80.0 + 1e-6 for e in r.energy_kwh[1:])
+    assert all(-1e-6 <= e <= 80.0 + 1e-6 for e in r.energy_kwh[1:])
     assert all(p >= -1e-6 for p in r.ess_kw[2:5])          # charges during the surplus
     assert sum(r.ess_kw[2:5]) == pytest.approx(60.0, abs=1e-4)
 
@@ -118,7 +118,7 @@ def legacy_solve(inp, p_max, export_limit):
         "import_limit_kw", "eta_charge", "eta_discharge", "degradation_weight", "pcc_penalty_per_kwh",
         "end_penalty_per_kwh", "loss_weight", "ramp_weight")}
     old = legacy_model.PlanInputs(p_max_kw=p_max, export_limit_kw=export_limit,
-                                  soc_min_pct=inp.soc_min_frac * 100, soc_max_pct=inp.soc_max_frac * 100, **fields)
+                                  soc_min_pct=0.0, soc_max_pct=100.0, **fields)
     r = legacy_model.solve(legacy_model.build_model(old), time_limit_s=60)
     assert r.ok, r.status
     return r
@@ -204,7 +204,7 @@ def test_positive_lower_limit_with_pv_surplus_is_respected_without_export():
 
 
 def test_positive_lower_limit_reports_overrun_when_infeasible():
-    # SoC window of zero width at e0: the battery cannot move, net = load = 10 kW < 15 kW for 8 h -> 40 kWh below.
-    r = solve(inputs(load_kw=[10.0] * 8, pv_kw=[0.0] * 8, e0_kwh=80.0, e_end_kwh=80.0, soc_min_frac=0.8, soc_max_frac=0.8,
+    # Zero power limits: the battery cannot move, net = load = 10 kW < 15 kW for 8 h -> 40 kWh below.
+    r = solve(inputs(load_kw=[10.0] * 8, pv_kw=[0.0] * 8, e0_kwh=80.0, e_end_kwh=80.0, ch_max_kw=0.0, dis_max_kw=0.0,
                      pcc_min_kw=15.0))
     assert r.below_limit_kwh == pytest.approx(40.0, abs=1e-4)

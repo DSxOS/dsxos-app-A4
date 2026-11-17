@@ -21,8 +21,6 @@ class PlanInputs:
     capacity_kwh: float
     e0_kwh: float                       # total stored energy at the start
     e_end_kwh: float                    # target stored energy at the end
-    soc_min_frac: float               # SoC limits are fractions 0..1 (SFU R2)
-    soc_max_frac: float
     import_limit_kw: float              # U: soft upper limit of the net PCC power (import positive)
     pcc_min_kw: float                   # L: soft lower limit of the net PCC power (signed; < 0 allows export, > 0 = minimum import)
     eta_charge: float = 0.95
@@ -49,19 +47,9 @@ class PlanResult:
     ramp_objective: float = 0.0
 
 
-def usable_to_total_kwh(usable_kwh, capacity_kwh, soc_min_frac, soc_max_frac):
-    """SFU R3: usable energy above the minimum SoC -> total stored energy.
-
-    Returns (total_kwh, clamped_usable_kwh). total = capacity*min + clamp(usable, 0, capacity*(max-min))."""
-    clamped = min(max(usable_kwh, 0.0), capacity_kwh * (soc_max_frac - soc_min_frac))
-    return capacity_kwh * soc_min_frac + clamped, clamped
-
-
 def energy_bounds(inp: PlanInputs):
-    """[Emin, Emax] from the SoC window, widened to include E[0] if it is already outside."""
-    e_min = inp.capacity_kwh * inp.soc_min_frac
-    e_max = inp.capacity_kwh * inp.soc_max_frac
-    return min(e_min, inp.e0_kwh), max(e_max, inp.e0_kwh)
+    """[Emin, Emax] = [0, capacity] kWh (capacity is the usable capacity; SFU-A1 R2'), widened to include E[0]."""
+    return min(0.0, inp.e0_kwh), max(inp.capacity_kwh, inp.e0_kwh)
 
 
 def loss_kw(m, t):
